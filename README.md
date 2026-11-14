@@ -14,6 +14,8 @@ O caminho seguro é um kit grátis do INEMA com 5 passos para atravessar os pró
 
 📖 Guia: **https://inematds.github.io/caminho-seguro/guia/**
 
+🎬 Vídeo (lives10): https://www.youtube.com/watch?v=Sp28Yi-zKU4 · Short: https://youtube.com/shorts/JrROTl6skg8
+
 🎬 Vídeo (lives11): https://www.youtube.com/watch?v=oN9sCuGD1b4 · Short: https://youtube.com/shorts/YpXU0OIhnG4
 
 🎬 Vídeo (lives3): https://www.youtube.com/watch?v=4iFMGw9YwhE · Short: https://youtube.com/shorts/zKYDYleamvU

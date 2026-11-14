@@ -14,6 +14,8 @@ El camino seguro es un kit gratis de INEMA con 5 pasos para afrontar los próxim
 
 📖 Guía: **https://inematds.github.io/caminho-seguro/guia/es/**
 
+🎬 Video (lives10): https://www.youtube.com/watch?v=Sp28Yi-zKU4 · Short: https://youtube.com/shorts/JrROTl6skg8
+
 🎬 Video (lives11): https://www.youtube.com/watch?v=oN9sCuGD1b4 · Short: https://youtube.com/shorts/YpXU0OIhnG4
 
 🎬 Video (lives3): https://www.youtube.com/watch?v=4iFMGw9YwhE · Short: https://youtube.com/shorts/zKYDYleamvU
