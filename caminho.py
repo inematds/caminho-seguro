@@ -7,6 +7,7 @@ quantidades para 72 horas e para 14 dias, os 5 passos e os checklists dos riscos
 Uso:
   python3 caminho.py                       # perguntas no terminal
   python3 caminho.py --pessoas 4 --criancas 1 --riscos enchente,apagao --saida meu-plano.md
+  python3 caminho.py --pessoas 2 --moradia apartamento --fogao inducao
   python3 caminho.py --listar-riscos
 
 Nada sai do seu computador: o script não usa internet.
@@ -33,6 +34,72 @@ RISCOS = {
     "conflito": "Conflito, violência e falta de abastecimento",
 }
 
+MORADIAS = {
+    "casa": "Casa na cidade",
+    "sitio": "Casa com quintal grande, chácara ou sítio",
+    "apartamento": "Apartamento",
+}
+
+FOGOES = {
+    "botijao": "Fogão a gás de botijão",
+    "encanado": "Fogão de gás encanado",
+    "eletrico": "Fogão elétrico ou cooktop de indução",
+    "lenha": "Fogão a lenha",
+}
+FOGAO_SINONIMOS = {"inducao": "eletrico", "indução": "eletrico", "elétrico": "eletrico", "gas": "botijao",
+                   "gás": "botijao", "sítio": "sitio", "chacara": "sitio", "chácara": "sitio", "apto": "apartamento"}
+
+# 72 h = comida pronta, sem fogo. 14 dias = comida seca + um jeito de cozinhar sem luz.
+SEM_COZINHAR_72H = [
+    "Primeiro a geladeira (segura o frio cerca de 4 h fechada), depois o freezer (cheio, cerca de 48 h), depois a despensa",
+    "Lata pronta: atum, sardinha, salsicha, carne, feijão e grão-de-bico prontos, milho, ervilha",
+    "Pão de forma, torrada, biscoito, pasta de amendoim, castanhas",
+    "Frutas que duram fora da geladeira e frutas secas; leite de caixinha ou em pó; aveia com leite frio, granola, barra de cereal",
+    "Abridor de lata manual e pratos descartáveis (poupa água de lavar)",
+]
+
+COZINHAR = {
+    "botijao": [
+        "Fósforo ou isqueiro no kit: o acendedor elétrico não funciona sem luz (teste hoje com o fogão fora da tomada)",
+        "Anotar quando trocou o botijão e trocar antes de acabar (13 kg dura de 3 semanas a 2 meses para 4 pessoas)",
+        "Botijão em pé, em lugar ventilado, longe de tomada e de calor",
+    ],
+    "encanado": [
+        "Teste hoje: desligue o disjuntor do fogão e acenda uma boca com fósforo",
+        "Fósforo ou isqueiro no kit; se o gás for cortado, siga o plano do fogão elétrico",
+    ],
+    "eletrico": [
+        "Sem luz o fogão não cozinha: guarde comida pronta para mais dias, não só para 72 horas",
+        "Fogareiro portátil a cartucho para ferver e esquentar, só ao ar livre ou na varanda aberta; um cartucho para cada 1 a 2 dias",
+        "Detector de monóxido de carbono a pilha em casa",
+    ],
+    "lenha": [
+        "Lenha seca, cortada e coberta, longe da parede da casa, com gravetos e papel para acender",
+        "Limpar a chaminé uma vez por ano",
+    ],
+}
+
+MORAR = {
+    "casa": [
+        "Fogão a lenha com chaminé pode ficar dentro de casa; fogareiro de tijolos ou improvisado, só ao ar livre, longe de mato seco e de criança",
+        "Sem quintal: fogareiro a cartucho ao ar livre, com detector de monóxido em casa",
+    ],
+    "sitio": [
+        "Fogão a lenha com chaminé é o melhor plano para semanas; sem ele, fogareiro de tijolos ao ar livre",
+        "Lenha seca guardada debaixo de telhado; respeitar a proibição de queimada na seca, com balde de água do lado",
+    ],
+    "apartamento": [
+        "Nada de lenha, carvão, churrasqueira ou fogueira no apartamento, na sacada ou na varanda; fogareiro a cartucho só na varanda aberta, se o prédio permitir",
+        "Se o prédio fechar o gás (enchente, vazamento), vale o plano do fogão elétrico: comida pronta",
+        "Botijão é proibido em muitos prédios: conferir a regra do seu antes de comprar; nunca botijão reserva dentro do apartamento",
+        "Combinar com os vizinhos: quem tem gás que funciona esquenta água para quem não tem",
+    ],
+}
+
+NUNCA_DENTRO = ("Nunca carvão, churrasqueira, braseiro ou gerador dentro de casa, na garagem fechada ou perto de janela "
+                "(monóxido de carbono não tem cheiro e mata). Dor de cabeça e enjoo em várias pessoas ao mesmo tempo: "
+                "saia para o ar livre e ligue 193.")
+
 CHECK_RISCO = {
     "enchente": [
         "Saber se a sua rua ou bairro já alagou e qual é o caminho até um lugar alto",
@@ -58,7 +125,8 @@ CHECK_RISCO = {
     "apagao": [
         "Lanterna e rádio a pilha (ou a manivela) com pilhas extras",
         "Carregador portátil (power bank) sempre carregado",
-        "Comida que não precisa de geladeira nem de fogão elétrico",
+        "Comida pronta para 3 dias, que não precisa de fogo nem de geladeira",
+        "Fósforo ou isqueiro: o fogão a gás acende sem luz, o acendedor elétrico não",
         "Dinheiro vivo para alguns dias de compras",
         "Números importantes escritos no papel, não só no celular",
     ],
@@ -81,6 +149,7 @@ CHECK_RISCO = {
 PASSOS = [
     ("1. Casa: o kit de 72 horas, depois 14 dias",
      "passos/1-casa-72h.md"),
+    ("1b. Comer e cozinhar sem luz", "passos/1b-cozinhar-sem-luz.md"),
     ("2. Não depender só do online", "passos/2-fora-do-online.md"),
     ("3. Proteção digital", "passos/3-digital.md"),
     ("4. Saúde e pessoas", "passos/4-saude-e-pessoas.md"),
@@ -107,6 +176,45 @@ def quantidades(pessoas: int, dias: int) -> dict:
     }
 
 
+def br(n: float, casas: int = 0) -> str:
+    """Número no jeito brasileiro: 24.000 e 6,9."""
+    return f"{n:,.{casas}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+def normaliza(valor: str | None, validos: dict, nome: str) -> str | None:
+    if not valor:
+        return None
+    v = valor.strip().lower()
+    v = FOGAO_SINONIMOS.get(v, v)
+    if v not in validos:
+        raise ValueError(f"{nome} desconhecido: {valor} (use: {', '.join(validos)})")
+    return v
+
+
+def secao_cozinhar(moradia: str | None, fogao: str | None) -> list[str]:
+    """Comer sem cozinhar nas 72 h; depois, como cozinhar sem luz conforme moradia e fogão."""
+    if moradia == "apartamento" and fogao == "lenha":
+        raise ValueError("fogão a lenha em apartamento não entra no plano: escolha botijao, encanado ou eletrico")
+    L = ["## Comer e cozinhar sem luz", "",
+         "**72 horas: ninguém cozinha.** A família come o que já está pronto.", ""]
+    L += [f"- [ ] {c}" for c in SEM_COZINHAR_72H] + [""]
+    L += ["**Mais de 3 dias: como cozinhar.** O estoque de arroz, macarrão e feijão precisa de fogo e de água "
+          "extra para cozinhar (os 2 L por dia são só para beber).", ""]
+    fogoes = [fogao] if fogao else list(COZINHAR)
+    if moradia == "apartamento" and not fogao:
+        fogoes = ["botijao", "encanado", "eletrico"]
+    moradias = [moradia] if moradia else list(MORAR)
+    for f in fogoes:
+        L += [f"### {FOGOES[f]}", ""] + [f"- [ ] {c}" for c in COZINHAR[f]] + [""]
+    for m in moradias:
+        L += [f"### {MORADIAS[m]}", ""] + [f"- [ ] {c}" for c in MORAR[m]] + [""]
+    L += ["- [ ] Truques: comida que cozinha rápido, feijão de lata, panela tampada, garrafa térmica e calor guardado "
+          "(ferve, desliga, enrola a panela no cobertor)", "",
+          f"> {NUNCA_DENTRO}", "",
+          "Detalhe em `passos/1b-cozinhar-sem-luz.md`. Manuais oficiais prontos: `MANUAIS.md`.", ""]
+    return L
+
+
 def parse_riscos(texto: str) -> list[str]:
     if not texto:
         return []
@@ -124,10 +232,12 @@ def parse_riscos(texto: str) -> list[str]:
 
 def montar_plano(nome: str, pessoas: int, criancas: int = 0, idosos: int = 0, pets: int = 0,
                  remedios: bool = False, riscos: list[str] | None = None,
-                 hoje: dt.date | None = None) -> str:
+                 hoje: dt.date | None = None, moradia: str | None = None, fogao: str | None = None) -> str:
     riscos = riscos or []
     hoje = hoje or dt.date.today()
     rev = hoje + dt.timedelta(days=round(REVISAR_MESES * 30.4))
+    moradia = normaliza(moradia, MORADIAS, "moradia")
+    fogao = normaliza(fogao, FOGOES, "fogão")
     q3 = quantidades(pessoas, DIAS_MINIMO)
     q14 = quantidades(pessoas, DIAS_META)
     titulo = f"Plano do caminho seguro — {nome}" if nome else "Plano do caminho seguro"
@@ -136,16 +246,21 @@ def montar_plano(nome: str, pessoas: int, criancas: int = 0, idosos: int = 0, pe
          f"Casa: {pessoas} pessoa(s)"
          + (f", {criancas} criança(s)" if criancas else "")
          + (f", {idosos} idoso(s)" if idosos else "")
-         + (f", {pets} pet(s)" if pets else "") + ".", "",
+         + (f", {pets} pet(s)" if pets else "") + "."
+         + (f" {MORADIAS[moradia]}." if moradia else "")
+         + (f" {FOGOES[fogao]}." if fogao else ""), "",
          "## Quanto guardar", "",
          "| | 72 horas (mínimo) | 14 dias (meta) |",
          "|---|---|---|",
          f"| Água para beber (2 L por pessoa por dia) | {q3['agua_l']:.0f} L ({q3['garrafoes_5l']} garrafões de 5 L) "
          f"| {q14['agua_l']:.0f} L ({q14['garrafoes_5l']} garrafões de 5 L) |",
-         f"| Comida que não estraga | ~{q3['kcal']:,} kcal (≈ {q3['kg_seco']:.1f} kg de alimento seco) "
-         f"| ~{q14['kcal']:,} kcal (≈ {q14['kg_seco']:.1f} kg de alimento seco) |".replace(",", "X").replace(".", ",").replace("X", "."),
-         "", "Água de higiene e de cozinhar é à parte. Comida: o que a família já come e que dura "
-         "(arroz, feijão, enlatados, macarrão, leite em pó, aveia, castanhas). Gire: use e reponha.", ""]
+         f"| Comida | ~{br(q3['kcal'])} kcal de comida pronta, sem cozinhar "
+         + (f"| ~{br(q14['kcal'])} kcal, a maior parte comida pronta (o fogão elétrico não cozinha sem luz) |"
+          if fogao == "eletrico" else
+          f"| ~{br(q14['kcal'])} kcal (≈ {br(q14['kg_seco'], 1)} kg de alimento seco, que precisa de fogo) |"),
+         "", "Água de higiene e de cozinhar é à parte. 72 h: lata pronta, biscoito, pão, castanhas, leite de caixinha "
+         "(ninguém cozinha). 14 dias: o que a família já come e que dura (arroz, feijão, macarrão, aveia, enlatados), "
+         "com um jeito de cozinhar sem luz. Gire: use e reponha.", ""]
     if criancas:
         L += ["- [ ] Fralda, leite/fórmula, remédio infantil e um brinquedo ou livro para cada criança"]
     if idosos:
@@ -156,6 +271,7 @@ def montar_plano(nome: str, pessoas: int, criancas: int = 0, idosos: int = 0, pe
         L += ["- [ ] Remédios de uso contínuo para 14 dias a mais e cópia da receita guardada no kit"]
     if criancas or idosos or pets or remedios:
         L += [""]
+    L += secao_cozinhar(moradia, fogao)
     L += ["## Os 5 passos", ""]
     for t, arq in PASSOS:
         L += [f"- [ ] **{t}** — ver `{arq}`"]
@@ -191,6 +307,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--pets", type=int, default=0)
     ap.add_argument("--remedios", action="store_true", help="alguém toma remédio de uso contínuo")
     ap.add_argument("--riscos", default=None, help="lista: " + ",".join(RISCOS))
+    ap.add_argument("--moradia", default=None, help="onde mora: " + ",".join(MORADIAS))
+    ap.add_argument("--fogao", default=None, help="fogão: " + ",".join(FOGOES) + " (inducao = eletrico)")
     ap.add_argument("--saida", default="meu-plano.md")
     ap.add_argument("--listar-riscos", action="store_true")
     a = ap.parse_args(argv)
@@ -210,8 +328,11 @@ def main(argv: list[str] | None = None) -> int:
             a.remedios = perguntar("Alguém toma remédio de uso contínuo? (s/n)", "n").lower().startswith("s")
             print("Riscos: " + ", ".join(RISCOS))
             a.riscos = perguntar("Quais riscos tem na sua região (separe por vírgula)", "apagao,digital")
+            a.moradia = perguntar("Onde mora (" + ", ".join(MORADIAS) + ")", "casa")
+            a.fogao = perguntar("Qual é o seu fogão (" + ", ".join(FOGOES) + ")", "botijao")
         riscos = parse_riscos(a.riscos or "apagao,digital")
-        plano = montar_plano(a.nome or "", a.pessoas, a.criancas, a.idosos, a.pets, a.remedios, riscos)
+        plano = montar_plano(a.nome or "", a.pessoas, a.criancas, a.idosos, a.pets, a.remedios, riscos,
+                             moradia=a.moradia, fogao=a.fogao)
     except ValueError as e:
         print(f"erro: {e}", file=sys.stderr)
         return 2

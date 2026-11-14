@@ -119,7 +119,9 @@
     <a class="sec" href="#porque">Por qué ahora</a>
     <a class="sec" href="#passos">Los 5 pasos</a>
     <a class="sec" href="#calcular">Calculadora</a>
+    <a class="sec" href="#cozinhar">Cocinar sin luz</a>
     <a class="sec" href="#biblioteca">Biblioteca offline</a>
+    <a class="sec" href="#manuais">Manuales</a>
     <a class="sec" href="#trabalho">Trabajo</a>
     <a class="sec" href="#tecnico">Kit (técnico)</a>
     <span class="lang"><a href="../">PT</a><a href="../en/">EN</a><a class="on" href="./">ES</a></span>
@@ -180,10 +182,10 @@
   <p class="sub">Hazlos en orden. Cada paso cabe en un fin de semana. El detalle de cada uno, con checklist, está en el kit (<a href="#guia">cómo usarlo ↓</a>).</p>
   <div class="flow"><span>1 · Casa</span><span class="arr">→</span><span>2 · Fuera de lo online</span><span class="arr">→</span><span>3 · Digital</span><span class="arr">→</span><span>4 · Salud y personas</span><span class="arr">→</span><span>5 · Trabajo</span></div>
   <div class="grid g2" style="margin-top:22px">
-    <div class="card"><h3>🏠 1. Casa: el kit de 72 horas, luego 14 días</h3><p>Es lo que recomienda la Defensa Civil (Brasil/Brazil) (y también la Unión Europea, desde 2025): <strong>2 litros de agua por persona al día</strong>, comida que no se eche a perder, medicamentos, linterna y radio a pilas, cargador portátil, documentos en una bolsa impermeable y los contactos en papel. Una familia de 4 necesita 24 litros de agua para 3 días. Después, aumenta poco a poco hasta 14 días y revisa cada 6 meses.</p></div>
+    <div class="card"><h3>🏠 1. Casa: el kit de 72 horas, luego 14 días</h3><p>Es lo que recomienda la Defensa Civil (Brasil) (y también la Unión Europea, desde 2025): <strong>2 litros de agua por persona al día</strong>, comida que no se eche a perder, medicamentos, linterna y radio a pilas, cargador portátil, documentos en una bolsa impermeable y los contactos en papel. Una familia de 4 necesita 24 litros de agua para 3 días. Durante las 72 horas nadie cocina: la comida ya está lista. Después, aumenta poco a poco hasta 14 días, con una forma de cocinar sin luz, y revisa cada 6 meses. <a href="#cozinhar">Comer y cocinar sin luz ↓</a></p></div>
     <div class="card"><h3>📴 2. No depender solo de lo online</h3><p>Si Pix, la aplicación del banco o internet dejan de funcionar, ¿cómo compras comida? Dinero en efectivo para algunos días de gastos (no significa sacar el dinero del banco), contactos, recetas médicas y documentos en papel, mapa e información guardados sin conexión, y la comida para 14 días ya en casa. <a href="#biblioteca">Biblioteca sin internet: 3 opciones ↓</a></p></div>
     <div class="card"><h3>🔐 3. Protección digital</h3><p>Es posible que tus datos ya se hayan filtrado. Desconfía de quien conoce tu nombre y CPF y te pide datos, contraseña o Pix. Activa la <strong>verificación en dos pasos</strong> (un código adicional a la contraseña): en el correo electrónico, con una aplicación de autenticación (como Google Authenticator o Microsoft Authenticator) en vez de SMS; en WhatsApp, la «confirmación en dos pasos» con un PIN de 6 dígitos; en el banco, el token de la propia aplicación. Usa una contraseña diferente para cada cuenta. Y consulta en <a href="https://registrato.bcb.gov.br" target="_blank" rel="noopener">Registrato</a> (sitio gratis del Banco Central) las cuentas y claves Pix abiertas con tu CPF.</p></div>
-    <div class="card"><h3>❤️ 4. Salud y personas</h3><p>Medicamentos de uso continuo para 14 días y la receta guardada. El <strong>acuerdo familiar</strong>: punto de encuentro, quién recoge a los niños, un familiar fuera de la ciudad a quien todos avisen, cómo comunicarse sin internet. Vecinos de confianza. Y las alertas de la Defensa Civil (Brasil/Brazil) en el celular: envía un SMS al <strong>40199</strong> con tu código postal.</p></div>
+    <div class="card"><h3>❤️ 4. Salud y personas</h3><p>Medicamentos de uso continuo para 14 días y la receta guardada. El <strong>acuerdo familiar</strong>: punto de encuentro, quién recoge a los niños, un familiar fuera de la ciudad a quien todos avisen, cómo comunicarse sin internet. Vecinos de confianza. Y las alertas de la Defensa Civil (Brasil) en el celular: envía un SMS al <strong>40199</strong> con tu código postal.</p></div>
   </div>
   <div class="card" style="margin-top:16px"><h3>🗺️ Cada región, un riesgo</h3><p>El kit incluye checklists para inundaciones y deslizamientos, vendavales y tornados, calor e incendios, apagones prolongados, estafas digitales y falta de abastecimiento. Elige los de tu ciudad y el plan incluirá solo lo que te importa.</p></div>
 </div></section>
@@ -192,23 +194,38 @@
 <section id="calcular"><div class="wrap">
   <span class="chip">Calculadora</span>
   <h2>Cuánto necesita <span class="amb">guardar</span> tu hogar</h2>
-  <p class="sub">Funciona en el celular, sin instalar nada. Calcula solo el agua para beber (2 litros por persona al día, según recomienda la Defensa Civil (Brasil/Brazil)) y la comida.</p>
+  <p class="sub">Funciona en el celular, sin instalar nada. Calcula solo el agua para beber (2 litros por persona al día, según recomienda la Defensa Civil (Brasil)) y la comida.</p>
   <div class="card">
     <label style="display:block;margin-bottom:10px">Personas en casa: <input id="cPes" type="number" min="1" max="30" value="4" style="width:5em;padding:.3em;border-radius:8px;border:1px solid var(--line);background:var(--bg2);color:inherit"></label>
     <table style="width:100%;border-collapse:collapse;font-size:.95rem">
       <tr><th style="text-align:left;padding:6px"></th><th style="text-align:left;padding:6px">72 horas</th><th style="text-align:left;padding:6px">14 días</th></tr>
       <tr><td style="padding:6px">Agua para beber</td><td style="padding:6px" id="cA3"></td><td style="padding:6px" id="cA14"></td></tr>
-      <tr><td style="padding:6px">Comida seca (arroz, frijoles, pasta)</td><td style="padding:6px" id="cC3"></td><td style="padding:6px" id="cC14"></td></tr>
+      <tr><td style="padding:6px">Comida (72 h: lista, sin cocinar · 14 días: seca, arroz, frijoles, pasta)</td><td style="padding:6px" id="cC3"></td><td style="padding:6px" id="cC14"></td></tr>
     </table>
-    <p style="margin-top:10px">Además: medicamentos de uso continuo, linterna y radio a pilas, documentos en una bolsa y los contactos en papel (199 · 193 · 192). Revisa cada 6 meses.</p>
+    <p style="margin-top:10px">La comida para 14 días, medida en kilos, está seca (necesita fuego). Si tienes una cocina eléctrica o de inducción, reemplaza buena parte por comida lista para comer (<a href="#cozinhar">cocinar sin luz ↓</a>). Además: medicamentos de uso continuo, linterna y radio a pilas, documentos en una bolsa y los contactos en papel (199 · 193 · 192). Revisa cada 6 meses.</p>
   </div>
 </div></section>
 <script>
 (function(){var i=document.getElementById('cPes');function f(n){return n.toLocaleString(document.documentElement.lang,{maximumFractionDigits:1})}
 function up(){var p=Math.max(1,Math.min(30,parseInt(i.value)||1));[[3,'3'],[14,'14']].forEach(function(d){var a=p*d[0]*2,k=p*d[0]*2000/3500;
-document.getElementById('cA'+d[1]).textContent=f(a)+' L ('+Math.ceil(a/5)+' × 5 L)';document.getElementById('cC'+d[1]).textContent='≈ '+f(Math.round(k*10)/10)+' kg';});}
+document.getElementById('cA'+d[1]).textContent=f(a)+' L ('+Math.ceil(a/5)+' × 5 L)';document.getElementById('cC'+d[1]).textContent=d[0]===3?'≈ '+f(p*d[0]*2000)+' kcal':'≈ '+f(Math.round(k*10)/10)+' kg';});}
 i.addEventListener('input',up);up();})();
 </script>
+
+<section id="cozinhar"><div class="wrap">
+  <span class="chip">Paso 1b</span>
+  <h2>Comer y cocinar <span class="amb">sin luz</span></h2>
+  <p class="sub">Durante las primeras 72 horas no se cocina: la familia come lo que ya está listo. Así ahorra gas y agua y evita el mayor riesgo de improvisar una llama en casa: el incendio y el monóxido de carbono (un gas sin olor ni color que mata). Si pasan más de 3 días, el plan depende de dónde vivas y de tu cocina.</p>
+  <div class="grid g2">
+    <div class="card"><h3>🥫 72 horas: sin cocinar</h3><p><strong>Primero, lo que se echa a perder:</strong> el refrigerador cerrado mantiene el frío durante unas 4 horas; el congelador lleno, unas 48 horas (medio lleno, 24). Después, la despensa: comida enlatada lista para comer (atún, sardinas, salchichas, frijoles y garbanzos listos, maíz), pan de molde, galletas, mantequilla de maní, frutos secos, frutas y frutas deshidratadas, leche larga vida o en polvo, avena con leche fría, barras de cereal. Abrelatas manual y platos descartables para ahorrar el agua de lavar.</p></div>
+    <div class="card"><h3>🔥 Más de 3 días: los trucos</h3><p>Las reservas de arroz, pasta y frijoles necesitan fuego y <strong>agua extra</strong> para cocinarse (los 2 litros por día son solo para beber). Prefiere lo que se cocina rápido (pasta fina, arroz parbolizado, cuscús, avena) y frijoles enlatados. Mantén siempre la olla tapada. <strong>Calor retenido:</strong> deja que hierva de verdad (arroz y pasta unos 5 minutos; frijoles remojados, al menos 10 minutos de hervor fuerte, porque los frijoles crudos hacen daño), apaga el fuego, tapa la olla y envuélvela en una manta; terminará de cocinarse con mucho menos gas. Un termo con agua hervida por la mañana sirve para todo el día.</p></div>
+    <div class="card"><h3>🏠 Casa con cocina a gas</h3><p>El gas no depende de la electricidad, pero el <strong>encendido eléctrico</strong> no funciona: ten fósforos o un encendedor en el kit y haz la prueba hoy, con la cocina desenchufada. El horno de algunas cocinas puede no funcionar sin electricidad; cuenta con las hornillas. Un cilindro de 13 kg dura de 3 semanas a 2 meses para una familia de 4: anota cuándo lo cambiaste y cámbialo antes de que se acabe. En la mayoría de los casos, el gas por tubería sigue llegando aunque no haya luz.</p></div>
+    <div class="card"><h3>🌳 Campo o casa con patio: leña</h3><p><strong>Una cocina a leña con chimenea</strong> es el mejor plan para varias semanas. Si no tienes una, usa un fogón de tres o cuatro ladrillos <strong>al aire libre</strong>, lejos de la casa, de la maleza seca y de los niños. Guarda leña seca, cortada y cubierta, lejos de la pared, con ramitas para encenderla: la leña verde produce humo y poco calor. Durante la estación seca, respeta la prohibición de quemas y deja un balde de agua al lado. En días de sol fuerte, una cocina solar permite cocinar sin humo.</p></div>
+    <div class="card"><h3>🏢 Apartamento</h3><p><strong>Nada de leña, carbón, parrilla ni fogata</strong> dentro del apartamento, en la balcón ni en la terraza. El cilindro de gas está prohibido en muchos edificios (en São Paulo y Río de Janeiro, en los que tienen gas por tubería): consulta el reglamento del tuyo y no guardes cilindros de repuesto en casa. Gas por tubería: haz la prueba del fósforo (durante una inundación, el edificio puede cerrar el suministro de gas). Una cocina eléctrica o de inducción no funciona sin luz; tu plan es cambiar buena parte de las reservas para 14 días por comida lista para comer y tener una cocinilla portátil de cartucho, para usar solo en un balcón abierto, si el edificio lo permite (cada cartucho dura de 1 a 2 horas con la llama encendida; un balcón cerrado con ventanas de vidrio no cuenta). Es la única excepción, porque la llama es pequeña, se enciende y se apaga de inmediato y no quedan brasas. Si el edificio no lo permite, el plan es comer solo alimentos listos para consumir y conseguir agua caliente con un vecino que tenga gas. Ponte de acuerdo con los vecinos: quien tenga gas calienta agua para quienes no.</p></div>
+    <div class="card"><h3>⚠️ Nunca, en ninguna casa</h3><p>Parrilla, cocinilla a carbón, brasero o generador <strong>dentro de casa, en un garaje cerrado o cerca de una ventana</strong>; tampoco enciendas la cocina o el horno para calentar. Si varias personas tienen dolor de cabeza, náuseas y mareos al mismo tiempo, salgan al aire libre y llamen al <strong>193</strong>. Si huele a gas: abre las ventanas, cierra la llave de paso, no toques ningún interruptor, sal y llama al 193. La cocinilla de cartucho también emite monóxido: úsala solo al aire libre o en un balcón abierto, nunca en un espacio cerrado. Un detector de monóxido de carbono a pilas es barato y protege a la familia.</p></div>
+  </div>
+  <p class="sub" style="margin-top:16px">La lista de verificación completa, según el tipo de vivienda y de cocina: <a href="https://github.com/inematds/caminho-seguro/blob/main/passos/1b-cozinhar-sem-luz.md" target="_blank" rel="noopener">comer y cocinar sin luz</a> (en portugués). Tiempos del refrigerador y del congelador: organismo de seguridad alimentaria de EE. UU. (USDA). No reemplaza las indicaciones de los Bomberos y de la Defensa Civil.</p>
+</div></section>
 
 <section id="biblioteca"><div class="wrap">
   <span class="chip">Sin internet</span>
@@ -222,6 +239,18 @@ i.addEventListener('input',up);up();})();
     <div class="card"><h3>🖥️ 3. Computadora potente: Project NOMAD</h3><p>Proyecto abierto de Crosstalk Solutions: en un panel del navegador, Wikipedia, cursos de Khan Academy para cada persona de la casa, mapas y una IA que lee tus documentos. Requiere Linux y, para usar la IA, 32 GB de memoria y una tarjeta NVIDIA. <a href="https://inematds.github.io/project-nomad/guia/" target="_blank" rel="noopener">Guía</a> · <a href="https://www.youtube.com/watch?v=0ime1xfLE9M" target="_blank" rel="noopener">vídeo</a></p></div>
   </div>
   <p class="sub" style="margin-top:16px">La IA se equivoca: consulta la dosis de los medicamentos y las decisiones de salud con un profesional. Tamaños comprobados el 13/11/2026 (cambian con cada edición).</p>
+</div></section>
+
+<section id="manuais"><div class="wrap">
+  <span class="chip">Manuales listos</span>
+  <h2>Los mejores manuales <span class="amb">oficiales y gratuitos</span></h2>
+  <p class="sub">Investigamos lo que ya está disponible en internet. Solo incluimos manuales gratuitos de gobiernos u organizaciones confiables, con el enlace verificado el 14/11/2026. No existe un único manual en portugués que cubra todo; esta guía combina lo esencial de varios, adaptado a Brasil. Descarga los PDF hoy y guárdalos en una biblioteca sin conexión.</p>
+  <div class="grid g3">
+    <div class="card"><h3>⏱️ 72 horas</h3><p><strong>Defensa Civil</strong> (Brasil): la recomendación oficial para el kit de 72 horas, resumida en el paso 1 de esta guía; para escribir el plan familiar en portugués, consulta el <a href="https://defesacivil.uff.br/wp-content/uploads/sites/325/2020/10/2014-Plano-de-Contingencia-da-Familia.pdf" target="_blank" rel="noopener">Plano de Contingência da Família</a> (en portugués) (Defensa Civil de la UFF, PDF). <a href="https://72tuntia.fi/wp-content/uploads/2025/01/spek_72_hours_home_preparedness_2025_01_21_v01.pdf" target="_blank" rel="noopener">72 hours</a> (Finlandia, 2025, en inglés): la guía de 72 horas mejor elaborada, breve y organizada por temas. <a href="https://www.getprepared.gc.ca/cnt/rsrcs/pblctns/yprprdnssgd/" target="_blank" rel="noopener">Your Emergency Preparedness Guide</a> (Canadá, en inglés): el plan familiar con hojas para completar.</p></div>
+    <div class="card"><h3>📦 De 10 días a un mes</h3><p><a href="https://www.bbk.bund.de/DE/Warnung-Vorsorge/Vorsorge/Ratgeber-Checkliste/ratgeber-checkliste_node.html" target="_blank" rel="noopener">BBK</a> (Alemania, en alemán; usa el traductor del navegador): meta oficial de 10 días, con una lista de alimentos por kilo. <a href="https://www.mcf.se/en/advice-for-individuals/the-brochure-in-case-of-crisis-or-war/download-and-order-the-brochure-in-case-of-crisis-or-war/" target="_blank" rel="noopener">In case of crisis or war</a> (Suecia, 2024, varios idiomas): alimentos, agua, calor, ataques digitales y vecinos. <a href="https://www.ready.gov/sites/default/files/2021-03/are-you-ready-guide.pdf" target="_blank" rel="noopener">Are You Ready?</a> (EE. UU., en inglés): la guía más completa, con un capítulo por desastre; el kit y la comida sin luz también están en español en <a href="https://www.ready.gov/es/kit" target="_blank" rel="noopener">Ready.gov</a>. Si no lees inglés ni alemán, empieza por Ready.gov en español y usa el traductor del navegador para BBK.</p></div>
+    <div class="card"><h3>🩺 Más de un mes</h3><p>Ningún gobierno publica manuales para más de un mes: los oficiales cubren hasta 10 o 14 días. Para más tiempo, la fórmula es la misma, a mayor escala: multiplica la lista de BBK, rota las reservas y ten una forma de cocinar que no se agote (leña, gas), además de agua para hervir. Lo que cambia es cómo cuidar la salud sin un médico: <a href="https://languages.hesperian.org/pages/es/index.html" target="_blank" rel="noopener">libros de salud de Hesperian en español</a>, la organización de <em>Donde no hay doctor</em>: salud y primeros auxilios para cuando el médico no llega.</p></div>
+  </div>
+  <p class="sub" style="margin-top:16px">La lista y el motivo de cada recomendación: <a href="https://github.com/inematds/caminho-seguro/blob/main/MANUAIS.md" target="_blank" rel="noopener">MANUAIS.md</a> (en portugués).</p>
 </div></section>
 
 <section id="trabalho"><div class="wrap">
@@ -248,9 +277,9 @@ i.addEventListener('input',up);up();})();
   <h2>Un plan para tu hogar <span class="amb">en un minuto</span></h2>
   <p class="sub">El kit es una carpeta con los 5 pasos en checklist y un programa en Python que hace los cálculos por ti. Funciona sin internet: nada sale de tu computadora.</p>
   <div class="grid g3">
-    <div class="card"><h3>🧮 Los cálculos correctos</h3><p>Agua (2 L por persona al día) y comida (2.000 kcal por persona al día) para 72 horas y para 14 días, en garrafas de 5 L y kilos de alimentos secos.</p></div>
+    <div class="card"><h3>🧮 Los cálculos correctos</h3><p>Agua (2 L por persona al día) y comida (2.000 kcal por persona al día) para 72 horas y para 14 días, en garrafones de 5 L; comida lista para las 72 horas y kilos de alimentos secos para los 14 días. Y la forma de cocinar sin luz en tu casa (casa, finca o departamento; bombona, gas por tubería, eléctrico o leña).</p></div>
     <div class="card"><h3>🗺️ Solo tus riesgos</h3><p>Elige inundación, vendaval, calor, apagón, riesgo digital o conflicto; el plan incluye el checklist correspondiente. Se incluyen niños, adultos mayores, mascotas y medicamentos si indicas que los tienes.</p></div>
-    <div class="card"><h3>📌 Hoja para el refrigerador</h3><p>Defensa Civil (Brasil/Brazil) 199, Bomberos 193, SAMU 192, punto de encuentro y quién recoge a los niños, además de la fecha de la próxima revisión (6 meses).</p></div>
+    <div class="card"><h3>📌 Hoja para el refrigerador</h3><p>Defensa Civil (Brasil) 199, Bomberos 193, SAMU 192, punto de encuentro y quién recoge a los niños, además de la fecha de la próxima revisión (6 meses).</p></div>
   </div>
 </div></section>
 
@@ -276,36 +305,36 @@ i.addEventListener('input',up);up();})();
   </div></div>
   <div class="step"><div class="b">2</div><div>
     <h3>Responde las preguntas</h3>
-    <p>Cuántas personas, niños, adultos mayores, mascotas, si alguien toma medicamentos de uso continuo y los riesgos de tu región. Enter acepta el valor predeterminado.</p>
+    <p>Cuántas personas, niños, adultos mayores, mascotas, si alguien toma medicamentos de uso continuo y los riesgos de tu región, dónde vives y qué tipo de estufa tienes. Enter acepta el valor predeterminado.</p>
 <pre><span class="k">python3 caminho.py</span>  <span class="c"># grava meu-plano.md</span></pre>
   </div></div>
   <div class="step"><div class="b">3</div><div>
     <h3>O pásalo todo de una vez</h3>
-    <p>Riesgos posibles: <code>enchente</code>, <code>vendaval</code>, <code>calor</code>, <code>apagao</code>, <code>digital</code>, <code>conflito</code>.</p>
-<pre><span class="k">python3 caminho.py --nome "Família Silva" --pessoas 4 --criancas 1 --remedios --riscos enchente,apagao,digital --saida meu-plano.md</span>
+    <p>Riesgos posibles: <code>enchente</code>, <code>vendaval</code>, <code>calor</code>, <code>apagao</code>, <code>digital</code>, <code>conflito</code>. Vivienda: <code>casa</code>, <code>sitio</code>, <code>apartamento</code>. Estufa: <code>botijao</code>, <code>encanado</code>, <code>eletrico</code> (o <code>inducao</code>), <code>lenha</code>.</p>
+<pre><span class="k">python3 caminho.py --nome "Família Silva" --pessoas 4 --criancas 1 --remedios --riscos enchente,apagao,digital --moradia apartamento --fogao inducao --saida meu-plano.md</span>
 <span class="c"># ok: meu-plano.md — 72 h: 24 L de água; revise en 6 meses</span>
 <span class="k">python3 caminho.py --listar-riscos</span></pre>
   </div></div>
   <div class="step"><div class="b">4</div><div>
     <h3>Imprime y marca</h3>
-    <p>Abre <code>meu-plano.md</code> (con cualquier editor de texto), imprímelo, pega la hoja en el refrigerador y ve marcando los elementos. Los detalles de cada paso están en <code>passos/1-casa-72h.md</code> a <code>passos/5-trabalho-ia.md</code>.</p>
+    <p>Abre <code>meu-plano.md</code> (con cualquier editor de texto), imprímelo, pega la hoja en el refrigerador y ve marcando los elementos. Los detalles de cada paso están en <code>passos/1-casa-72h.md</code> a <code>passos/5-trabalho-ia.md</code>; cocinar sin luz en <code>passos/1b-cozinhar-sem-luz.md</code> y los manuales listos en <code>MANUAIS.md</code>.</p>
   </div></div>
   <div class="step"><div class="b">5</div><div>
     <h3>Revisa cada 6 meses</h3>
     <p>El plan incluye la fecha. Vuelve a ejecutarlo si cambia la familia. Para quienes modifican el código, las pruebas:</p>
 <pre><span class="k">python3 -m venv .venv &amp;&amp; . .venv/bin/activate &amp;&amp; pip install pytest</span>  <span class="c"># só para os testes</span>
-<span class="k">python3 -m pytest -q tests</span>  <span class="c"># 17 passed</span></pre>
+<span class="k">python3 -m pytest -q tests</span>  <span class="c"># 24 passed</span></pre>
   </div></div>
 </div></section>
 
 <section id="exemplos"><div class="wrap">
   <span class="chip">Ejemplo</span>
   <h2>Una familia de 4</h2>
-  <p class="sub">Generado con <code>--pessoas 4 --criancas 1 --idosos 1 --pets 1 --remedios --riscos enchente,apagao,digital</code> (archivo <a href="https://github.com/inematds/caminho-seguro/blob/main/exemplo/meu-plano-exemplo.md" target="_blank" rel="noopener">exemplo/meu-plano-exemplo.md</a>).</p>
+  <p class="sub">Generado con <code>--pessoas 4 --criancas 1 --idosos 1 --pets 1 --remedios --riscos enchente,apagao,digital --moradia casa --fogao botijao</code> (archivo <a href="https://github.com/inematds/caminho-seguro/blob/main/exemplo/meu-plano-exemplo.md" target="_blank" rel="noopener">exemplo/meu-plano-exemplo.md</a>).</p>
   <div class="card"><table style="width:100%;border-collapse:collapse;font-size:.92rem">
     <tr><th style="text-align:left;padding:6px"></th><th style="text-align:left;padding:6px">72 horas (mínimo)</th><th style="text-align:left;padding:6px">14 días (objetivo)</th></tr>
     <tr><td style="padding:6px">Agua para beber</td><td style="padding:6px">24 L (5 garrafas de 5 L)</td><td style="padding:6px">112 L (23 garrafas de 5 L)</td></tr>
-    <tr><td style="padding:6px">Comida que no se echa a perder</td><td style="padding:6px">~24.000 kcal (≈ 6,9 kg de alimentos secos)</td><td style="padding:6px">~112.000 kcal (≈ 32 kg de alimentos secos)</td></tr>
+    <tr><td style="padding:6px">Comida</td><td style="padding:6px">~24.000 kcal de comida lista, sin cocinar</td><td style="padding:6px">~112.000 kcal (≈ 32 kg de alimentos secos, que necesitan fuego)</td></tr>
   </table><p style="margin-top:10px">Además: pañales y leche para el niño, gafas y medicamentos para el adulto mayor, alimento para la mascota, recetas en el kit y los checklists de inundación, apagón y estafa digital.</p></div>
 </div></section>
 
@@ -317,7 +346,7 @@ i.addEventListener('input',up);up();})();
   <div class="phase"><div class="tag">NOMAD</div><div class="d"><strong><a href="https://inematds.github.io/project-nomad/guia/" target="_blank" rel="noopener">project-nomad</a></strong><span>Project NOMAD: servidor de conocimiento sin internet para una computadora potente (Wikipedia, cursos, mapas e IA).</span></div></div>
   <div class="phase"><div class="tag">Trabajo</div><div class="d"><strong><a href="https://inematds.github.io/nivel-ia/guia/" target="_blank" rel="noopener">nivel-ia</a></strong><span>El certificado de tu nivel de IA (AL1 a AL5), con proyección a 1, 3 y 6 meses.</span></div></div>
   <div class="phase"><div class="tag">Clima</div><div class="d"><strong><a href="https://www.youtube.com/@eventosextremos-inema" target="_blank" rel="noopener">Canal de eventos extremos de INEMA</a></strong><span>Cómo protegerte de tornados, inundaciones y calor en el canal de eventos extremos de INEMA.</span></div></div>
-  <p class="sub" style="margin-top:18px">No sustituye las indicaciones de la Defensa Civil (Brasil/Brazil) de tu ciudad. No es asesoramiento financiero ni médico.</p>
+  <p class="sub" style="margin-top:18px">No sustituye las indicaciones de la Defensa Civil (Brasil) de tu ciudad. No es asesoramiento financiero ni médico.</p>
 </div></section>
 </div>
 

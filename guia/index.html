@@ -119,7 +119,9 @@
     <a class="sec" href="#porque">Por que agora</a>
     <a class="sec" href="#passos">Os 5 passos</a>
     <a class="sec" href="#calcular">Calculadora</a>
+    <a class="sec" href="#cozinhar">Cozinhar sem luz</a>
     <a class="sec" href="#biblioteca">Biblioteca offline</a>
+    <a class="sec" href="#manuais">Manuais</a>
     <a class="sec" href="#trabalho">Trabalho</a>
     <a class="sec" href="#tecnico">Kit (técnico)</a>
     <span class="lang"><a class="on" href="./">PT</a><a href="en/">EN</a><a href="es/">ES</a></span>
@@ -179,7 +181,7 @@
   <p class="sub">Faça na ordem. Cada passo cabe num fim de semana. O detalhe de cada um, com checklist, está no kit (<a href="#guia">como usar ↓</a>).</p>
   <div class="flow"><span>1 · Casa</span><span class="arr">→</span><span>2 · Fora do online</span><span class="arr">→</span><span>3 · Digital</span><span class="arr">→</span><span>4 · Saúde e pessoas</span><span class="arr">→</span><span>5 · Trabalho</span></div>
   <div class="grid g2" style="margin-top:22px">
-    <div class="card"><h3>🏠 1. Casa: o kit de 72 horas, depois 14 dias</h3><p>É o que a Defesa Civil recomenda (e a União Europeia também, desde 2025): <strong>2 litros de água por pessoa por dia</strong>, comida que não estraga, remédios, lanterna e rádio a pilha, carregador portátil, documentos em saco à prova d'água e os contatos no papel. Uma família de 4 precisa de 24 litros de água para 3 dias. Depois, aumente aos poucos até 14 dias e revise a cada 6 meses.</p></div>
+    <div class="card"><h3>🏠 1. Casa: o kit de 72 horas, depois 14 dias</h3><p>É o que a Defesa Civil recomenda (e a União Europeia também, desde 2025): <strong>2 litros de água por pessoa por dia</strong>, comida que não estraga, remédios, lanterna e rádio a pilha, carregador portátil, documentos em saco à prova d'água e os contatos no papel. Uma família de 4 precisa de 24 litros de água para 3 dias. Nas 72 horas ninguém cozinha: a comida é pronta. Depois, aumente aos poucos até 14 dias, com um jeito de cozinhar sem luz, e revise a cada 6 meses. <a href="#cozinhar">Comer e cozinhar sem luz ↓</a></p></div>
     <div class="card"><h3>📴 2. Não depender só do online</h3><p>Se o Pix, o app do banco ou a internet pararem, como você compra comida? Dinheiro vivo para alguns dias de gasto (não é tirar o dinheiro do banco), contatos, receitas médicas e documentos no papel, mapa e informação guardados offline, e a comida de 14 dias já em casa. <a href="#biblioteca">Biblioteca sem internet: 3 opções ↓</a></p></div>
     <div class="card"><h3>🔐 3. Proteção digital</h3><p>Seus dados podem já estar vazados. Desconfie de quem sabe seu nome e CPF e pede dado, senha ou Pix. Ligue a <strong>verificação em duas etapas</strong> (um código extra além da senha): no e-mail, por um aplicativo autenticador (como Google Authenticator ou Microsoft Authenticator) em vez de SMS; no WhatsApp, a "confirmação em duas etapas" com um PIN de 6 dígitos; no banco, o token do próprio aplicativo. Senha diferente em cada conta. E confira no <a href="https://registrato.bcb.gov.br" target="_blank" rel="noopener">Registrato</a> (site grátis do Banco Central) as contas e chaves Pix abertas no seu CPF.</p></div>
     <div class="card"><h3>❤️ 4. Saúde e pessoas</h3><p>Remédios de uso contínuo com folga de 14 dias e a receita guardada. O <strong>combinado da família</strong>: ponto de encontro, quem busca as crianças, um parente fora da cidade que todos avisam, como se falar sem internet. Vizinhos de confiança. E o alerta da Defesa Civil no celular: SMS para o <strong>40199</strong> com o seu CEP.</p></div>
@@ -197,17 +199,32 @@
     <table style="width:100%;border-collapse:collapse;font-size:.95rem">
       <tr><th style="text-align:left;padding:6px"></th><th style="text-align:left;padding:6px">72 horas</th><th style="text-align:left;padding:6px">14 dias</th></tr>
       <tr><td style="padding:6px">Água para beber</td><td style="padding:6px" id="cA3"></td><td style="padding:6px" id="cA14"></td></tr>
-      <tr><td style="padding:6px">Comida seca (arroz, feijão, macarrão)</td><td style="padding:6px" id="cC3"></td><td style="padding:6px" id="cC14"></td></tr>
+      <tr><td style="padding:6px">Comida (72 h: pronta, sem cozinhar · 14 dias: seca, arroz, feijão, macarrão)</td><td style="padding:6px" id="cC3"></td><td style="padding:6px" id="cC14"></td></tr>
     </table>
-    <p style="margin-top:10px">Mais: remédios de uso contínuo, lanterna e rádio a pilha, documentos no saco e os contatos no papel (199 · 193 · 192). Revise a cada 6 meses.</p>
+    <p style="margin-top:10px">A comida de 14 dias em quilos é seca (precisa de fogo). Fogão elétrico ou de indução: troque boa parte por comida pronta (<a href="#cozinhar">cozinhar sem luz ↓</a>). Mais: remédios de uso contínuo, lanterna e rádio a pilha, documentos no saco e os contatos no papel (199 · 193 · 192). Revise a cada 6 meses.</p>
   </div>
 </div></section>
 <script>
 (function(){var i=document.getElementById('cPes');function f(n){return n.toLocaleString(document.documentElement.lang,{maximumFractionDigits:1})}
 function up(){var p=Math.max(1,Math.min(30,parseInt(i.value)||1));[[3,'3'],[14,'14']].forEach(function(d){var a=p*d[0]*2,k=p*d[0]*2000/3500;
-document.getElementById('cA'+d[1]).textContent=f(a)+' L ('+Math.ceil(a/5)+' × 5 L)';document.getElementById('cC'+d[1]).textContent='≈ '+f(Math.round(k*10)/10)+' kg';});}
+document.getElementById('cA'+d[1]).textContent=f(a)+' L ('+Math.ceil(a/5)+' × 5 L)';document.getElementById('cC'+d[1]).textContent=d[0]===3?'≈ '+f(p*d[0]*2000)+' kcal':'≈ '+f(Math.round(k*10)/10)+' kg';});}
 i.addEventListener('input',up);up();})();
 </script>
+
+<section id="cozinhar"><div class="wrap">
+  <span class="chip">Passo 1b</span>
+  <h2>Comer e cozinhar <span class="amb">sem luz</span></h2>
+  <p class="sub">Nas primeiras 72 horas você não cozinha: a família come o que já está pronto. Poupa gás e água e evita o maior risco de quem improvisa fogo em casa, o incêndio e o monóxido de carbono (um gás sem cheiro nem cor, que mata). Se passar de 3 dias, o plano depende de onde você mora e do seu fogão.</p>
+  <div class="grid g2">
+    <div class="card"><h3>🥫 72 horas: sem cozinhar</h3><p><strong>Primeiro o que estraga:</strong> a geladeira fechada segura o frio por cerca de 4 horas; o freezer cheio, cerca de 48 horas (metade cheio, 24). Depois, a despensa: lata pronta (atum, sardinha, salsicha, feijão e grão-de-bico prontos, milho), pão de forma, biscoito, pasta de amendoim, castanhas, frutas e frutas secas, leite de caixinha ou em pó, aveia com leite frio, barra de cereal. Abridor de lata manual e prato descartável, que poupa água de lavar.</p></div>
+    <div class="card"><h3>🔥 Mais de 3 dias: os truques</h3><p>O estoque de arroz, macarrão e feijão precisa de fogo e de <strong>água extra</strong> para cozinhar (os 2 litros por dia são só para beber). Prefira o que cozinha rápido (macarrão fino, arroz parboilizado, cuscuz, aveia) e feijão de lata. Panela sempre tampada. <strong>Calor guardado:</strong> ferva de verdade (arroz e macarrão uns 5 minutos; feijão de molho, pelo menos 10 minutos de fervura forte, porque feijão cru faz mal), desligue, tampe e enrole a panela num cobertor; ela termina de cozinhar gastando bem menos gás. Garrafa térmica com água fervida de manhã serve o dia todo.</p></div>
+    <div class="card"><h3>🏠 Casa com fogão a gás</h3><p>O gás não depende de luz, mas o <strong>acendedor elétrico</strong> não funciona: tenha fósforo ou isqueiro no kit e teste hoje, com o fogão fora da tomada. O forno de alguns fogões pode não funcionar sem luz; conte com as bocas. Um botijão de 13 kg dura de 3 semanas a 2 meses para uma família de 4: anote quando trocou e troque antes de acabar. O gás encanado, na maioria das vezes, continua chegando sem luz.</p></div>
+    <div class="card"><h3>🌳 Sítio ou casa com quintal: lenha</h3><p><strong>Fogão a lenha com chaminé</strong> é o melhor plano para semanas. Sem ele, um fogareiro de três ou quatro tijolos <strong>ao ar livre</strong>, longe da casa, de mato seco e de criança. Guarde lenha seca, cortada e coberta, longe da parede, com gravetos para acender: lenha verde faz fumaça e pouco calor. Na seca, respeite a proibição de queimada e deixe um balde de água do lado. Em dia de sol forte, um fogão solar cozinha sem fumaça.</p></div>
+    <div class="card"><h3>🏢 Apartamento</h3><p><strong>Nada de lenha, carvão, churrasqueira ou fogueira</strong> no apartamento, na sacada ou na varanda. O botijão é proibido em muitos prédios (em São Paulo e no Rio, nos que têm gás canalizado): confira a regra do seu e não guarde botijão reserva em casa. Gás encanado: faça o teste do fósforo (em enchente o prédio pode fechar o gás). Fogão elétrico ou de indução não cozinha sem luz; o seu plano é trocar boa parte do estoque de 14 dias por comida pronta e ter um fogareiro portátil a cartucho, usado só na varanda aberta, se o prédio permitir: é a única exceção, porque a chama é pequena, acende e apaga na hora e não tem brasa (cada cartucho dá 1 a 2 horas; varanda envidraçada fechada não vale). Se o prédio não deixa, o plano é só comida pronta e água quente com um vizinho que tenha gás. Combine com os vizinhos: quem tem gás esquenta água para quem não tem.</p></div>
+    <div class="card"><h3>⚠️ Nunca, em nenhuma casa</h3><p>Churrasqueira, fogareiro a carvão, braseiro ou gerador <strong>dentro de casa, na garagem fechada ou perto de janela</strong>; fogão ou forno aceso para aquecer. Dor de cabeça, enjoo e tontura em várias pessoas ao mesmo tempo: saia para o ar livre e ligue <strong>193</strong>. Cheiro de gás: abra janelas, feche o registro, não mexa em interruptor, saia e ligue 193. O fogareiro a cartucho também solta monóxido: só ao ar livre ou na varanda aberta, nunca em cômodo fechado. Um detector de monóxido de carbono a pilha é barato e protege a família.</p></div>
+  </div>
+  <p class="sub" style="margin-top:16px">O checklist completo, por moradia e por fogão: <a href="https://github.com/inematds/caminho-seguro/blob/main/passos/1b-cozinhar-sem-luz.md" target="_blank" rel="noopener">comer e cozinhar sem luz</a>. Tempos da geladeira e do freezer: órgão de segurança de alimentos dos EUA (USDA). Não substitui a orientação dos Bombeiros e da Defesa Civil.</p>
+</div></section>
 
 <section id="biblioteca"><div class="wrap">
   <span class="chip">Sem internet</span>
@@ -221,6 +238,18 @@ i.addEventListener('input',up);up();})();
     <div class="card"><h3>🖥️ 3. Computador forte: Project NOMAD</h3><p>Projeto aberto da Crosstalk Solutions: num painel no navegador, Wikipedia, cursos da Khan Academy para cada pessoa da casa, mapas e uma IA que lê os seus documentos. Pede Linux e, com IA, 32 GB de memória e placa NVIDIA. <a href="https://inematds.github.io/project-nomad/guia/" target="_blank" rel="noopener">Guia</a> · <a href="https://www.youtube.com/watch?v=0ime1xfLE9M" target="_blank" rel="noopener">vídeo</a></p></div>
   </div>
   <p class="sub" style="margin-top:16px">A IA erra: confira dose de remédio e decisões de saúde com um profissional. Tamanhos conferidos em 13/11/2026 (mudam a cada edição).</p>
+</div></section>
+
+<section id="manuais"><div class="wrap">
+  <span class="chip">Manuais prontos</span>
+  <h2>Os melhores manuais <span class="amb">oficiais e grátis</span></h2>
+  <p class="sub">Pesquisamos o que já existe pronto na internet. Entrou só manual de governo ou de organização séria, grátis, com o link conferido em 14/11/2026. Não há um único manual em português que cubra tudo; o caminho seguro junta o essencial deles, para o Brasil. Baixe os PDFs hoje e guarde na biblioteca sem internet.</p>
+  <div class="grid g3">
+    <div class="card"><h3>⏱️ 72 horas</h3><p><strong>Defesa Civil</strong> (Brasil): a orientação oficial do kit de 72 horas, resumida no passo 1 deste guia; para escrever o plano da família em português, o <a href="https://defesacivil.uff.br/wp-content/uploads/sites/325/2020/10/2014-Plano-de-Contingencia-da-Familia.pdf" target="_blank" rel="noopener">Plano de Contingência da Família</a> (Defesa Civil da UFF, PDF). <a href="https://72tuntia.fi/wp-content/uploads/2025/01/spek_72_hours_home_preparedness_2025_01_21_v01.pdf" target="_blank" rel="noopener">72 hours</a> (Finlândia, 2025, em inglês): o 72 horas mais bem feito, curto e por tema. <a href="https://www.getprepared.gc.ca/cnt/rsrcs/pblctns/yprprdnssgd/" target="_blank" rel="noopener">Your Emergency Preparedness Guide</a> (Canadá, em inglês): o plano da família com folhas para preencher.</p></div>
+    <div class="card"><h3>📦 De 10 dias a um mês</h3><p><a href="https://www.bbk.bund.de/DE/Warnung-Vorsorge/Vorsorge/Ratgeber-Checkliste/ratgeber-checkliste_node.html" target="_blank" rel="noopener">BBK</a> (Alemanha, em alemão; use o tradutor do navegador): meta oficial de 10 dias, com a lista de comida por quilo. <a href="https://www.mcf.se/en/advice-for-individuals/the-brochure-in-case-of-crisis-or-war/download-and-order-the-brochure-in-case-of-crisis-or-war/" target="_blank" rel="noopener">In case of crisis or war</a> (Suécia, 2024, vários idiomas): comida, água, calor, ataque digital e vizinhos. <a href="https://www.ready.gov/sites/default/files/2021-03/are-you-ready-guide.pdf" target="_blank" rel="noopener">Are You Ready?</a> (EUA, em inglês): o mais completo, um capítulo por desastre; o kit e a comida sem luz também em espanhol no <a href="https://www.ready.gov/es/kit" target="_blank" rel="noopener">Ready.gov</a>. Quem não lê inglês nem alemão: comece pelo Ready.gov em espanhol e use o tradutor do navegador no BBK.</p></div>
+    <div class="card"><h3>🩺 Mais de um mês</h3><p>Nenhum governo publica manual para mais de um mês: os oficiais vão até 10 a 14 dias. Para mais tempo, a receita é a mesma em escala: a lista do BBK multiplicada, girando o estoque, com um jeito de cozinhar que não acaba (lenha, gás) e água para ferver. O que muda é a saúde sem médico: <a href="https://languages.hesperian.org/pages/pt/index.html" target="_blank" rel="noopener">Livros de saúde da Hesperian em português</a>, a organização de <em>Onde não há médico</em>: saúde e primeiros socorros para quando o médico não chega.</p></div>
+  </div>
+  <p class="sub" style="margin-top:16px">A lista com o porquê de cada um: <a href="https://github.com/inematds/caminho-seguro/blob/main/MANUAIS.md" target="_blank" rel="noopener">MANUAIS.md</a>.</p>
 </div></section>
 
 <section id="trabalho"><div class="wrap">
@@ -247,7 +276,7 @@ i.addEventListener('input',up);up();})();
   <h2>Um plano da sua casa <span class="amb">em um minuto</span></h2>
   <p class="sub">O kit é uma pasta com os 5 passos em checklist e um programa em Python que faz as contas por você. Funciona sem internet: nada sai do seu computador.</p>
   <div class="grid g3">
-    <div class="card"><h3>🧮 As contas certas</h3><p>Água (2 L por pessoa por dia) e comida (2.000 kcal por pessoa por dia) para 72 horas e para 14 dias, em garrafões de 5 L e quilos de alimento seco.</p></div>
+    <div class="card"><h3>🧮 As contas certas</h3><p>Água (2 L por pessoa por dia) e comida (2.000 kcal por pessoa por dia) para 72 horas e para 14 dias, em garrafões de 5 L; comida pronta para as 72 horas e quilos de alimento seco para os 14 dias. E o jeito de cozinhar sem luz da sua casa (casa, sítio ou apartamento; botijão, gás encanado, elétrico ou lenha).</p></div>
     <div class="card"><h3>🗺️ Só os seus riscos</h3><p>Você escolhe enchente, vendaval, calor, apagão, digital ou conflito; o plano traz o checklist de cada um. Crianças, idosos, pets e remédios entram quando você diz que tem.</p></div>
     <div class="card"><h3>📌 Folha da geladeira</h3><p>Defesa Civil 199, Bombeiros 193, SAMU 192, ponto de encontro e quem busca as crianças, mais a data da próxima revisão (6 meses).</p></div>
   </div>
@@ -275,36 +304,36 @@ i.addEventListener('input',up);up();})();
   </div></div>
   <div class="step"><div class="b">2</div><div>
     <h3>Responda as perguntas</h3>
-    <p>Quantas pessoas, crianças, idosos, pets, se alguém toma remédio contínuo e os riscos da sua região. Enter aceita o padrão.</p>
+    <p>Quantas pessoas, crianças, idosos, pets, se alguém toma remédio contínuo, os riscos da sua região, onde você mora e qual é o seu fogão. Enter aceita o padrão.</p>
 <pre><span class="k">python3 caminho.py</span>  <span class="c"># grava meu-plano.md</span></pre>
   </div></div>
   <div class="step"><div class="b">3</div><div>
     <h3>Ou passe tudo de uma vez</h3>
-    <p>Riscos possíveis: <code>enchente</code>, <code>vendaval</code>, <code>calor</code>, <code>apagao</code>, <code>digital</code>, <code>conflito</code>.</p>
-<pre><span class="k">python3 caminho.py --nome "Família Silva" --pessoas 4 --criancas 1 --remedios --riscos enchente,apagao,digital --saida meu-plano.md</span>
+    <p>Riscos possíveis: <code>enchente</code>, <code>vendaval</code>, <code>calor</code>, <code>apagao</code>, <code>digital</code>, <code>conflito</code>. Moradia: <code>casa</code>, <code>sitio</code>, <code>apartamento</code>. Fogão: <code>botijao</code>, <code>encanado</code>, <code>eletrico</code> (ou <code>inducao</code>), <code>lenha</code>.</p>
+<pre><span class="k">python3 caminho.py --nome "Família Silva" --pessoas 4 --criancas 1 --remedios --riscos enchente,apagao,digital --moradia apartamento --fogao inducao --saida meu-plano.md</span>
 <span class="c"># ok: meu-plano.md — 72 h: 24 L de água; revise em 6 meses</span>
 <span class="k">python3 caminho.py --listar-riscos</span></pre>
   </div></div>
   <div class="step"><div class="b">4</div><div>
     <h3>Imprima e marque</h3>
-    <p>Abra o <code>meu-plano.md</code> (qualquer editor de texto), imprima, cole a folha da geladeira e vá marcando os itens. Os detalhes de cada passo estão em <code>passos/1-casa-72h.md</code> a <code>passos/5-trabalho-ia.md</code>.</p>
+    <p>Abra o <code>meu-plano.md</code> (qualquer editor de texto), imprima, cole a folha da geladeira e vá marcando os itens. Os detalhes de cada passo estão em <code>passos/1-casa-72h.md</code> a <code>passos/5-trabalho-ia.md</code>; cozinhar sem luz em <code>passos/1b-cozinhar-sem-luz.md</code> e os manuais prontos em <code>MANUAIS.md</code>.</p>
   </div></div>
   <div class="step"><div class="b">5</div><div>
     <h3>Revise a cada 6 meses</h3>
     <p>O plano traz a data. Rode de novo se a família mudar. Para quem mexe no código, os testes:</p>
 <pre><span class="k">python3 -m venv .venv &amp;&amp; . .venv/bin/activate &amp;&amp; pip install pytest</span>  <span class="c"># só para os testes</span>
-<span class="k">python3 -m pytest -q tests</span>  <span class="c"># 17 passed</span></pre>
+<span class="k">python3 -m pytest -q tests</span>  <span class="c"># 24 passed</span></pre>
   </div></div>
 </div></section>
 
 <section id="exemplos"><div class="wrap">
   <span class="chip">Exemplo</span>
   <h2>Uma família de 4</h2>
-  <p class="sub">Gerado com <code>--pessoas 4 --criancas 1 --idosos 1 --pets 1 --remedios --riscos enchente,apagao,digital</code> (arquivo <a href="https://github.com/inematds/caminho-seguro/blob/main/exemplo/meu-plano-exemplo.md" target="_blank" rel="noopener">exemplo/meu-plano-exemplo.md</a>).</p>
+  <p class="sub">Gerado com <code>--pessoas 4 --criancas 1 --idosos 1 --pets 1 --remedios --riscos enchente,apagao,digital --moradia casa --fogao botijao</code> (arquivo <a href="https://github.com/inematds/caminho-seguro/blob/main/exemplo/meu-plano-exemplo.md" target="_blank" rel="noopener">exemplo/meu-plano-exemplo.md</a>).</p>
   <div class="card"><table style="width:100%;border-collapse:collapse;font-size:.92rem">
     <tr><th style="text-align:left;padding:6px"></th><th style="text-align:left;padding:6px">72 horas (mínimo)</th><th style="text-align:left;padding:6px">14 dias (meta)</th></tr>
     <tr><td style="padding:6px">Água para beber</td><td style="padding:6px">24 L (5 garrafões de 5 L)</td><td style="padding:6px">112 L (23 garrafões de 5 L)</td></tr>
-    <tr><td style="padding:6px">Comida que não estraga</td><td style="padding:6px">~24.000 kcal (≈ 6,9 kg de alimento seco)</td><td style="padding:6px">~112.000 kcal (≈ 32 kg de alimento seco)</td></tr>
+    <tr><td style="padding:6px">Comida</td><td style="padding:6px">~24.000 kcal de comida pronta, sem cozinhar</td><td style="padding:6px">~112.000 kcal (≈ 32 kg de alimento seco, que precisa de fogo)</td></tr>
   </table><p style="margin-top:10px">Mais: fralda e leite da criança, óculos e remédios do idoso, ração do pet, receitas no kit e os checklists de enchente, apagão e golpe digital.</p></div>
 </div></section>
 

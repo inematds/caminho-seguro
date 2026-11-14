@@ -119,7 +119,9 @@
     <a class="sec" href="#porque">Why now</a>
     <a class="sec" href="#passos">The 5 steps</a>
     <a class="sec" href="#calcular">Calculator</a>
+    <a class="sec" href="#cozinhar">Cooking without power</a>
     <a class="sec" href="#biblioteca">Offline library</a>
+    <a class="sec" href="#manuais">Guides</a>
     <a class="sec" href="#trabalho">Work</a>
     <a class="sec" href="#tecnico">Kit (technical)</a>
     <span class="lang"><a href="../">PT</a><a class="on" href="./">EN</a><a href="../es/">ES</a></span>
@@ -180,7 +182,7 @@
   <p class="sub">Do them in order. Each step fits into a weekend. The details and checklists are in the kit (<a href="#guia">how to use it ↓</a>).</p>
   <div class="flow"><span>1 · Home</span><span class="arr">→</span><span>2 · Offline</span><span class="arr">→</span><span>3 · Digital</span><span class="arr">→</span><span>4 · Health and people</span><span class="arr">→</span><span>5 · Work</span></div>
   <div class="grid g2" style="margin-top:22px">
-    <div class="card"><h3>🏠 1. Home: a 72-hour kit, then 14 days</h3><p>This is what Civil Defense (Brazil) recommends (and the European Union has too, since 2025): <strong>2 liters of water per person per day</strong>, nonperishable food, medicine, a flashlight and battery-powered radio, a portable charger, documents in a waterproof bag, and contacts on paper. A family of 4 needs 24 liters of water for 3 days. Then gradually build up to 14 days and review every 6 months.</p></div>
+    <div class="card"><h3>🏠 1. Home: a 72-hour kit, then 14 days</h3><p>This is what Civil Defense (Brazil) recommends (and the European Union has too, since 2025): <strong>2 liters of water per person per day</strong>, nonperishable food, medicine, a flashlight and battery-powered radio, a portable charger, documents in a waterproof bag, and contacts on paper. A family of 4 needs 24 liters of water for 3 days. In the first 72 hours, no one cooks: the food is ready to eat. After that, gradually build up to 14 days’ worth, with a way to cook without power, and review every 6 months. <a href="#cozinhar">Eating and cooking without power ↓</a></p></div>
     <div class="card"><h3>📴 2. Don’t rely only on online access</h3><p>If Pix, your banking app, or the internet stops working, how will you buy food? Keep enough cash for a few days of expenses (don’t withdraw your bank savings), contacts, prescriptions, and documents on paper, a map and information saved offline, and 14 days of food already at home. <a href="#biblioteca">Library without internet: 3 options ↓</a></p></div>
     <div class="card"><h3>🔐 3. Digital protection</h3><p>Your data may already have been leaked. Be wary of anyone who knows your name and CPF and asks for personal information, a password, or Pix. Turn on <strong>two-step verification</strong> (an extra code in addition to your password): for email, use an authenticator app (such as Google Authenticator or Microsoft Authenticator) instead of SMS; for WhatsApp, use “two-step verification” with a 6-digit PIN; for your bank, use the token in its own app. Use a different password for each account. Also check <a href="https://registrato.bcb.gov.br" target="_blank" rel="noopener">Registrato</a> (a free Central Bank website) for accounts and Pix keys opened under your CPF.</p></div>
     <div class="card"><h3>❤️ 4. Health and people</h3><p>Keep a 14-day supply of prescription medicine and store the prescription. <strong>Make a family plan</strong>: a meeting place, who picks up the children, a relative outside town everyone can contact, and how to reach each other without internet. Trusted neighbors. And Civil Defense (Brazil) alerts on your phone: text your ZIP code to <strong>40199</strong>.</p></div>
@@ -198,17 +200,32 @@
     <table style="width:100%;border-collapse:collapse;font-size:.95rem">
       <tr><th style="text-align:left;padding:6px"></th><th style="text-align:left;padding:6px">72 hours</th><th style="text-align:left;padding:6px">14 days</th></tr>
       <tr><td style="padding:6px">Drinking water</td><td style="padding:6px" id="cA3"></td><td style="padding:6px" id="cA14"></td></tr>
-      <tr><td style="padding:6px">Dry food (rice, beans, pasta)</td><td style="padding:6px" id="cC3"></td><td style="padding:6px" id="cC14"></td></tr>
+      <tr><td style="padding:6px">Food (72 h: ready to eat, no cooking · 14 days: dry goods, rice, beans, pasta)</td><td style="padding:6px" id="cC3"></td><td style="padding:6px" id="cC14"></td></tr>
     </table>
-    <p style="margin-top:10px">Also: prescription medicine, a flashlight and battery-powered radio, documents in a bag, and contacts on paper (199 · 193 · 192). Review every 6 months.</p>
+    <p style="margin-top:10px">The 14-day food supply in kilograms is dry (it needs cooking). Electric or induction stove: replace much of it with ready-to-eat food (<a href="#cozinhar">cooking without power ↓</a>). Also: prescription medicine, a flashlight and battery-powered radio, documents in a bag, and contacts on paper (199 · 193 · 192). Review every 6 months.</p>
   </div>
 </div></section>
 <script>
 (function(){var i=document.getElementById('cPes');function f(n){return n.toLocaleString(document.documentElement.lang,{maximumFractionDigits:1})}
 function up(){var p=Math.max(1,Math.min(30,parseInt(i.value)||1));[[3,'3'],[14,'14']].forEach(function(d){var a=p*d[0]*2,k=p*d[0]*2000/3500;
-document.getElementById('cA'+d[1]).textContent=f(a)+' L ('+Math.ceil(a/5)+' × 5 L)';document.getElementById('cC'+d[1]).textContent='≈ '+f(Math.round(k*10)/10)+' kg';});}
+document.getElementById('cA'+d[1]).textContent=f(a)+' L ('+Math.ceil(a/5)+' × 5 L)';document.getElementById('cC'+d[1]).textContent=d[0]===3?'≈ '+f(p*d[0]*2000)+' kcal':'≈ '+f(Math.round(k*10)/10)+' kg';});}
 i.addEventListener('input',up);up();})();
 </script>
+
+<section id="cozinhar"><div class="wrap">
+  <span class="chip">Step 1b</span>
+  <h2>Eating and cooking <span class="amb">without power</span></h2>
+  <p class="sub">For the first 72 hours, you don’t cook: the family eats what’s already ready. This saves gas and water and avoids the biggest risk of improvised indoor fires: fire and carbon monoxide (an odorless, colorless gas that can kill). If it lasts more than 3 days, the plan depends on where you live and what kind of stove you have.</p>
+  <div class="grid g2">
+    <div class="card"><h3>🥫 72 hours: no cooking</h3><p><strong>Eat the food that spoils first:</strong> a closed refrigerator keeps food cold for about 4 hours; a full freezer, about 48 hours (half full, 24). After that, use the pantry: ready-to-eat canned food (tuna, sardines, hot dogs, ready-to-eat beans and chickpeas, corn), sliced bread, crackers, peanut butter, nuts, fruit and dried fruit, shelf-stable or powdered milk, oatmeal made with cold milk, cereal bars. A manual can opener and disposable plates save water for washing.</p></div>
+    <div class="card"><h3>🔥 More than 3 days: useful tricks</h3><p>Rice, pasta, and beans need heat and <strong>extra water</strong> to cook (the 2 liters per day are for drinking only). Choose foods that cook quickly (thin pasta, parboiled rice, couscous, oatmeal) and canned beans. Keep the pot covered. <strong>Stored heat:</strong> bring food to a full boil (rice and pasta for about 5 minutes; soaked beans for at least 10 minutes at a rolling boil, because raw beans can make you sick), turn off the heat, cover the pot, and wrap it in a blanket; it will finish cooking while using much less gas. A thermos filled with boiled water in the morning will last all day.</p></div>
+    <div class="card"><h3>🏠 Home with a gas stove</h3><p>Gas doesn’t depend on electricity, but the <strong>electric igniter</strong> won’t work: keep matches or a lighter in your kit and test them today with the stove unplugged. Some stove ovens may not work without power; rely on the burners. A 13 kg gas cylinder lasts 3 weeks to 2 months for a family of 4: note when you replaced it and replace it before it runs out. Piped gas usually keeps flowing without power.</p></div>
+    <div class="card"><h3>🌳 Rural home or home with a yard: firewood</h3><p><strong>A wood-burning stove with a chimney</strong> is the best plan for weeks. Without one, use a stove made from three or four bricks <strong>outdoors</strong>, away from the house, dry brush, and children. Store dry, cut, covered firewood away from the wall, with kindling to start the fire: green wood produces smoke and little heat. During the dry season, follow the burn ban and keep a bucket of water nearby. On a sunny day, a solar cooker can cook without smoke.</p></div>
+    <div class="card"><h3>🏢 Apartment</h3><p><strong>Never use firewood, charcoal, a grill, or a campfire</strong> in the apartment, on the deck, or on the balcony. Gas cylinders are prohibited in many buildings (in São Paulo and Rio, in buildings with piped gas): check your building’s rules and don’t keep a spare cylinder at home. Piped gas: do the match test (during a flood, the building may shut off the gas). Electric or induction stoves won’t cook without power; plan to replace much of your 14-day supply with ready-to-eat food and keep a portable butane stove, used only on an open balcony if the building allows it (each canister provides 1 to 2 hours of flame; a closed, glass-enclosed balcony doesn’t count). It’s the only exception because the flame is small, turns on and off instantly, and leaves no embers. If the building doesn’t allow it, the plan is to stick to ready-to-eat food and get hot water from a neighbor who has gas. Make an arrangement with your neighbors: those with gas can heat water for those without it.</p></div>
+    <div class="card"><h3>⚠️ Never, in any home</h3><p>Never use a grill, charcoal stove, brazier, or generator <strong>indoors, in an enclosed garage, or near a window</strong>; never leave a stove or oven on for heat. If several people have a headache, nausea, or dizziness at the same time, get outdoors and call <strong>193</strong>. If you smell gas: open the windows, shut off the valve, don’t touch any switches, leave, and call 193. Butane stoves also produce carbon monoxide: use them only outdoors or on an open balcony, never in an enclosed room. An inexpensive battery-powered carbon monoxide detector can protect your family.</p></div>
+  </div>
+  <p class="sub" style="margin-top:16px">The full checklist, organized by home and stove type: <a href="https://github.com/inematds/caminho-seguro/blob/main/passos/1b-cozinhar-sem-luz.md" target="_blank" rel="noopener">eating and cooking without power</a> (in Portuguese). Refrigerator and freezer times: U.S. food safety agency (USDA). This does not replace guidance from the Fire Department and Civil Defense.</p>
+</div></section>
 
 <section id="biblioteca"><div class="wrap">
   <span class="chip">No internet</span>
@@ -222,6 +239,18 @@ i.addEventListener('input',up);up();})();
     <div class="card"><h3>🖥️ 3. Powerful computer: Project NOMAD</h3><p>Open project by Crosstalk Solutions: in a browser dashboard, Wikipedia, Khan Academy courses for each person in the household, maps, and an AI that reads your documents. Requires Linux and, for AI, 32 GB of memory and an NVIDIA graphics card. <a href="https://inematds.github.io/project-nomad/guia/" target="_blank" rel="noopener">Guide</a> · <a href="https://www.youtube.com/watch?v=0ime1xfLE9M" target="_blank" rel="noopener">video</a></p></div>
   </div>
   <p class="sub" style="margin-top:16px">AI can be wrong: check medication doses and health decisions with a professional. Sizes checked on November 13, 2026 (they change with each release).</p>
+</div></section>
+
+<section id="manuais"><div class="wrap">
+  <span class="chip">Ready-to-use guides</span>
+  <h2>The best <span class="amb">free official guides</span></h2>
+  <p class="sub">We researched the guides already available online. We included only free guides from governments or reputable organizations, with links checked on 11/14/2026. There is no single guide in Portuguese that covers everything; this guide brings together the essentials for Brazil. Download the PDFs today and save them in your offline library.</p>
+  <div class="grid g3">
+    <div class="card"><h3>⏱️ 72 hours</h3><p><strong>Civil Defense</strong> (Brazil): official guidance on the 72-hour kit, summarized in Step 1 of this guide; to write your family plan in Portuguese, see the <a href="https://defesacivil.uff.br/wp-content/uploads/sites/325/2020/10/2014-Plano-de-Contingencia-da-Familia.pdf" target="_blank" rel="noopener">Plano de Contingência da Família</a> (in Portuguese) (UFF Civil Defense, PDF). <a href="https://72tuntia.fi/wp-content/uploads/2025/01/spek_72_hours_home_preparedness_2025_01_21_v01.pdf" target="_blank" rel="noopener">72 hours</a> (Finland, 2025, in English): the best-made 72-hour guide, concise and organized by topic. <a href="https://www.getprepared.gc.ca/cnt/rsrcs/pblctns/yprprdnssgd/" target="_blank" rel="noopener">Your Emergency Preparedness Guide</a> (Canada, in English): a family plan with fill-in worksheets.</p></div>
+    <div class="card"><h3>📦 10 days to a month</h3><p><a href="https://www.bbk.bund.de/DE/Warnung-Vorsorge/Vorsorge/Ratgeber-Checkliste/ratgeber-checkliste_node.html" target="_blank" rel="noopener">BBK</a> (Germany, in German; use your browser’s translator): the official 10-day goal, with a food list by weight. <a href="https://www.mcf.se/en/advice-for-individuals/the-brochure-in-case-of-crisis-or-war/download-and-order-the-brochure-in-case-of-crisis-or-war/" target="_blank" rel="noopener">In case of crisis or war</a> (Sweden, 2024, multiple languages): food, water, heat, cyberattacks, and neighbors. <a href="https://www.ready.gov/sites/default/files/2021-03/are-you-ready-guide.pdf" target="_blank" rel="noopener">Are You Ready?</a> (U.S., in English): the most comprehensive guide, with one chapter per disaster; the kit and food guidance for power outages are also available in Spanish at <a href="https://www.ready.gov/es/kit" target="_blank" rel="noopener">Ready.gov</a>. If you don’t read English or German, start with Ready.gov in Spanish and use your browser’s translator for BBK.</p></div>
+    <div class="card"><h3>🩺 More than a month</h3><p>No government publishes a guide for more than a month: official guides cover up to 10 to 14 days. For longer periods, the same approach applies at a larger scale: multiply the BBK list, rotate your supplies, have a way to cook that won’t run out (firewood, gas), and keep water for boiling. What changes is staying healthy without a doctor: <a href="https://languages.hesperian.org/pages/en/index.html" target="_blank" rel="noopener">Hesperian health books in English</a>, from the organization behind <em>Where There Is No Doctor</em>: health and first aid for when a doctor can’t get there.</p></div>
+  </div>
+  <p class="sub" style="margin-top:16px">The list with the reasons for each choice: <a href="https://github.com/inematds/caminho-seguro/blob/main/MANUAIS.md" target="_blank" rel="noopener">MANUAIS.md</a> (in Portuguese).</p>
 </div></section>
 
 <section id="trabalho"><div class="wrap">
@@ -248,7 +277,7 @@ i.addEventListener('input',up);up();})();
   <h2>A plan for your home <span class="amb">in one minute</span></h2>
   <p class="sub">The kit is a folder with the 5 steps in checklist form and a Python program that does the calculations for you. It works offline: nothing leaves your computer.</p>
   <div class="grid g3">
-    <div class="card"><h3>🧮 The right calculations</h3><p>Water (2 L per person per day) and food (2,000 kcal per person per day) for 72 hours and 14 days, in 5 L jugs and kilograms of dry food.</p></div>
+    <div class="card"><h3>🧮 The right calculations</h3><p>Water (2 L per person per day) and food (2,000 kcal per person per day) for 72 hours and 14 days, in 5 L jugs; ready-to-eat food for the first 72 hours and kilograms of dry food for 14 days. And your household’s way to cook without power (house, rural property, or apartment; gas cylinder, piped gas, electric, or wood).</p></div>
     <div class="card"><h3>🗺️ Only your risks</h3><p>Choose floods, severe winds, heat, blackouts, digital risks, or conflict; the plan includes the checklist for each. Children, older adults, pets, and medicine are included if you say they apply.</p></div>
     <div class="card"><h3>📌 Fridge sheet</h3><p>Civil Defense (Brazil) 199, Fire Department 193, SAMU 192, meeting place and who picks up the children, plus the date of the next review (6 months).</p></div>
   </div>
@@ -276,36 +305,36 @@ i.addEventListener('input',up);up();})();
   </div></div>
   <div class="step"><div class="b">2</div><div>
     <h3>Answer the questions</h3>
-    <p>How many people, children, older adults, pets, whether anyone takes regular medication, and the risks in your region. Press Enter to accept the default.</p>
+    <p>How many people, children, older adults, pets, whether anyone takes regular medication, and the risks in your region, where you live and what kind of stove you have. Press Enter to accept the default.</p>
 <pre><span class="k">python3 caminho.py</span>  <span class="c"># grava meu-plano.md</span></pre>
   </div></div>
   <div class="step"><div class="b">3</div><div>
     <h3>Or enter everything at once</h3>
-    <p>Possible risks: <code>enchente</code>, <code>vendaval</code>, <code>calor</code>, <code>apagao</code>, <code>digital</code>, <code>conflito</code>.</p>
-<pre><span class="k">python3 caminho.py --nome "Família Silva" --pessoas 4 --criancas 1 --remedios --riscos enchente,apagao,digital --saida meu-plano.md</span>
+    <p>Possible risks: <code>enchente</code>, <code>vendaval</code>, <code>calor</code>, <code>apagao</code>, <code>digital</code>, <code>conflito</code>. Housing: <code>casa</code>, <code>sitio</code>, <code>apartamento</code>. Stove: <code>botijao</code>, <code>encanado</code>, <code>eletrico</code> (or <code>inducao</code>), <code>lenha</code>.</p>
+<pre><span class="k">python3 caminho.py --nome "Família Silva" --pessoas 4 --criancas 1 --remedios --riscos enchente,apagao,digital --moradia apartamento --fogao inducao --saida meu-plano.md</span>
 <span class="c"># ok: meu-plano.md — 72 h: 24 L de água; revise em 6 meses</span>
 <span class="k">python3 caminho.py --listar-riscos</span></pre>
   </div></div>
   <div class="step"><div class="b">4</div><div>
     <h3>Print and check off</h3>
-    <p>Open <code>meu-plano.md</code> (in any text editor), print it, put the fridge sheet on the fridge, and check off the items as you go. Details for each step are in <code>passos/1-casa-72h.md</code> to <code>passos/5-trabalho-ia.md</code>.</p>
+    <p>Open <code>meu-plano.md</code> (in any text editor), print it, put the fridge sheet on the fridge, and check off the items as you go. Details for each step are in <code>passos/1-casa-72h.md</code> to <code>passos/5-trabalho-ia.md</code>; cooking without power in <code>passos/1b-cozinhar-sem-luz.md</code> and the ready-made guides in <code>MANUAIS.md</code>.</p>
   </div></div>
   <div class="step"><div class="b">5</div><div>
     <h3>Review every 6 months</h3>
     <p>The plan includes the date. Run it again if your family changes. For anyone working with the code, the tests are:</p>
 <pre><span class="k">python3 -m venv .venv &amp;&amp; . .venv/bin/activate &amp;&amp; pip install pytest</span>  <span class="c"># só para os testes</span>
-<span class="k">python3 -m pytest -q tests</span>  <span class="c"># 17 passed</span></pre>
+<span class="k">python3 -m pytest -q tests</span>  <span class="c"># 24 passed</span></pre>
   </div></div>
 </div></section>
 
 <section id="exemplos"><div class="wrap">
   <span class="chip">Example</span>
   <h2>A family of 4</h2>
-  <p class="sub">Generated with <code>--pessoas 4 --criancas 1 --idosos 1 --pets 1 --remedios --riscos enchente,apagao,digital</code> (file <a href="https://github.com/inematds/caminho-seguro/blob/main/exemplo/meu-plano-exemplo.md" target="_blank" rel="noopener">exemplo/meu-plano-exemplo.md</a>).</p>
+  <p class="sub">Generated with <code>--pessoas 4 --criancas 1 --idosos 1 --pets 1 --remedios --riscos enchente,apagao,digital --moradia casa --fogao botijao</code> (file <a href="https://github.com/inematds/caminho-seguro/blob/main/exemplo/meu-plano-exemplo.md" target="_blank" rel="noopener">exemplo/meu-plano-exemplo.md</a>).</p>
   <div class="card"><table style="width:100%;border-collapse:collapse;font-size:.92rem">
     <tr><th style="text-align:left;padding:6px"></th><th style="text-align:left;padding:6px">72 hours (minimum)</th><th style="text-align:left;padding:6px">14 days (target)</th></tr>
     <tr><td style="padding:6px">Drinking water</td><td style="padding:6px">24 L (5 jugs of 5 L)</td><td style="padding:6px">112 L (23 jugs of 5 L)</td></tr>
-    <tr><td style="padding:6px">Nonperishable food</td><td style="padding:6px">~24,000 kcal (≈ 6.9 kg of dry food)</td><td style="padding:6px">~112,000 kcal (≈ 32 kg of dry food)</td></tr>
+    <tr><td style="padding:6px">Food</td><td style="padding:6px">~24,000 kcal of ready-to-eat food, no cooking</td><td style="padding:6px">~112,000 kcal (≈ 32 kg of dry food that needs to be cooked over a fire)</td></tr>
   </table><p style="margin-top:10px">Also: the child’s diapers and milk, the older adult’s glasses and medicine, pet food, prescriptions in the kit, and the flood, blackout, and digital scam checklists.</p></div>
 </div></section>
 

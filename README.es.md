@@ -26,10 +26,13 @@ El camino seguro es un kit gratis de INEMA con 5 pasos para afrontar los próxim
 | Paso | Qué es | Archivo |
 |---|---|---|
 | 1. Casa | Kit de 72 horas de Defensa Civil (2 L de agua por persona al día), después 14 días | [passos/1-casa-72h.md](passos/1-casa-72h.md) |
+| 1b. Cocinar sin electricidad | 72 horas sin cocinar (comida lista); después, cómo cocinar según la vivienda (casa, finca, apartamento) y la cocina (bombona, gas por tubería, eléctrica, leña) | [passos/1b-cozinhar-sem-luz.md](passos/1b-cozinhar-sem-luz.md) |
 | 2. Fuera de línea | Dinero en efectivo para algunos días, papel, información sin conexión, comida sin depender de la app | [passos/2-fora-do-online.md](passos/2-fora-do-online.md) |
 | 3. Digital | La estafa después de la filtración, verificación en dos pasos mediante una aplicación, Registrato | [passos/3-digital.md](passos/3-digital.md) |
 | 4. Salud y personas | Medicamentos de reserva, acuerdo familiar, vecinos, alerta 40199 | [passos/4-saude-e-pessoas.md](passos/4-saude-e-pessoas.md) |
 | 5. Trabajo | Certificado de tu nivel de IA, la próxima tarea para la IA, inema.club gratis | [passos/5-trabalho-ia.md](passos/5-trabalho-ia.md) |
+
+Los mejores manuales oficiales y gratuitos ya disponibles (72 horas, de 10 días a un mes, sin médico): [MANUAIS.md](MANUAIS.md).
 
 ## Tu plan en 1 minuto
 
@@ -40,6 +43,7 @@ python3 caminho.py            # responde 7 preguntas y guarda meu-plano.md
 
 O directamente: `python3 caminho.py --pessoas 4 --criancas 1 --riscos enchente,apagao,digital --saida meu-plano.md`.  
 Riesgos: `enchente`, `vendaval`, `calor`, `apagao`, `digital`, `conflito` (`--listar-riscos`).  
+Vivienda y cocina: `--moradia casa|sitio|apartamento --fogao botijao|encanado|eletrico|lenha` (el plan muestra solo la forma de cocinar que corresponde a tu vivienda).
 El plan incluye agua y comida para 72 h y 14 días, las listas de verificación de los riesgos de tu región, la hoja para el refrigerador  
 (199 · 193 · 192) y la fecha de la próxima revisión (6 meses). Ejemplo: [exemplo/meu-plano-exemplo.md](exemplo/meu-plano-exemplo.md).  
 Python 3.9+, sin instalar nada y sin internet.

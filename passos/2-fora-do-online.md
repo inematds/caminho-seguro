@@ -11,6 +11,6 @@ comida e remédio?
 - [ ] **Informação offline:** mapa da cidade impresso ou baixado no celular; rotas até a casa de parentes; um guia de
       primeiros socorros impresso. Para ir além (Wikipedia e IA no seu computador, sem internet), veja o kit
       [sobreviver-ia](https://inematds.github.io/sobreviver-ia/guia/).
-- [ ] **Comida e remédio para 14 dias** em casa (passo 1): no dia da pane, você não precisa do app nem do cartão.
+- [ ] **Comida e remédio para 14 dias** em casa (passo 1) e um jeito de cozinhar sem luz ([1b](1b-cozinhar-sem-luz.md)): no dia da pane, você não precisa do app nem do cartão.
 - [ ] **Energia:** carregador portátil, pilhas, e se puder, um painel solar pequeno ou carregador de carro.
 - [ ] **Combinar com a família** como se falar se o celular cair (passo 4).

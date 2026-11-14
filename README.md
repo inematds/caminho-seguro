@@ -25,10 +25,13 @@ O caminho seguro é um kit grátis do INEMA com 5 passos para atravessar os pró
 | Passo | O que é | Arquivo |
 |---|---|---|
 | 1. Casa | Kit de 72 horas da Defesa Civil (2 L de água por pessoa por dia), depois 14 dias | [passos/1-casa-72h.md](passos/1-casa-72h.md) |
+| 1b. Cozinhar sem luz | 72 horas sem cozinhar (comida pronta); depois, como cozinhar conforme a casa (casa, sítio, apartamento) e o fogão (botijão, gás encanado, elétrico, lenha) | [passos/1b-cozinhar-sem-luz.md](passos/1b-cozinhar-sem-luz.md) |
 | 2. Fora do online | Dinheiro vivo para alguns dias, papel, informação offline, comida sem depender do app | [passos/2-fora-do-online.md](passos/2-fora-do-online.md) |
 | 3. Digital | O golpe depois do vazamento, verificação em duas etapas por aplicativo, Registrato | [passos/3-digital.md](passos/3-digital.md) |
 | 4. Saúde e pessoas | Remédios com folga, combinado da família, vizinhos, alerta 40199 | [passos/4-saude-e-pessoas.md](passos/4-saude-e-pessoas.md) |
 | 5. Trabalho | Certificado do seu nível de IA, a próxima tarefa para a IA, inema.club grátis | [passos/5-trabalho-ia.md](passos/5-trabalho-ia.md) |
+
+Os melhores manuais oficiais e grátis já prontos (72 horas, 10 dias a um mês, sem médico): [MANUAIS.md](MANUAIS.md).
 
 ## O seu plano em 1 minuto
 
@@ -39,6 +42,7 @@ python3 caminho.py            # responde 7 perguntas e grava meu-plano.md
 
 Ou direto: `python3 caminho.py --pessoas 4 --criancas 1 --riscos enchente,apagao,digital --saida meu-plano.md`.
 Riscos: `enchente`, `vendaval`, `calor`, `apagao`, `digital`, `conflito` (`--listar-riscos`).
+Moradia e fogão: `--moradia casa|sitio|apartamento --fogao botijao|encanado|eletrico|lenha` (o plano mostra só o jeito de cozinhar da sua casa).
 O plano traz água e comida para 72 h e 14 dias, os checklists dos riscos da sua região, a folha da geladeira
 (199 · 193 · 192) e a data da próxima revisão (6 meses). Exemplo: [exemplo/meu-plano-exemplo.md](exemplo/meu-plano-exemplo.md).
 Python 3.9+, sem instalar nada, sem internet.

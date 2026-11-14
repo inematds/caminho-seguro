@@ -62,7 +62,70 @@ def test_plano_checklists_dos_riscos():
 
 def test_numero_brasileiro_na_tabela():
     txt = caminho.montar_plano("", 4)
-    assert "~24.000 kcal" in txt and "≈ 6,9 kg" in txt
+    assert "~24.000 kcal de comida pronta, sem cozinhar" in txt and "≈ 32,0 kg de alimento seco" in txt
+    linha = next(l for l in txt.splitlines() if l.startswith("| Comida"))
+    assert "6,9 kg" not in linha          # 72 h não vira quilo de comida seca: é comida pronta
+    assert "pronta. sem" not in txt        # vírgula do texto não pode virar ponto
+
+
+def test_72h_sem_cozinhar_e_14d_com_fogo():
+    txt = caminho.montar_plano("", 2)
+    assert "## Comer e cozinhar sem luz" in txt and "72 horas: ninguém cozinha" in txt
+    assert "geladeira" in txt and "48 h" in txt
+    # sem moradia/fogão, o plano mostra todas as opções
+    for f in caminho.FOGOES.values():
+        assert f"### {f}" in txt
+    for m in caminho.MORADIAS.values():
+        assert f"### {m}" in txt
+    assert "monóxido de carbono" in txt and "193" in txt
+
+
+def test_apartamento_inducao_so_o_que_serve():
+    txt = caminho.montar_plano("", 2, moradia="apto", fogao="indução")
+    assert "### Fogão elétrico ou cooktop de indução" in txt and "### Apartamento" in txt
+    assert "### Fogão a lenha" not in txt and "### Casa com quintal" not in txt
+    assert "Nada de lenha, carvão, churrasqueira" in txt and "proibido em muitos prédios" in txt
+    linha = next(l for l in txt.splitlines() if l.startswith("| Comida"))
+    assert "precisa de fogo" not in linha and "comida pronta (o fogão elétrico" in linha
+
+
+def test_apartamento_sem_fogao_nao_oferece_lenha():
+    txt = caminho.montar_plano("", 2, moradia="apartamento")
+    assert "### Fogão a lenha" not in txt and "### Fogão de gás encanado" in txt
+
+
+def test_sitio_lenha():
+    txt = caminho.montar_plano("", 3, moradia="sitio", fogao="lenha")
+    assert "### Fogão a lenha" in txt and "chaminé" in txt and "queimada" in txt
+    assert "### Apartamento" not in txt
+
+
+def test_moradia_ou_fogao_invalidos():
+    with pytest.raises(ValueError):
+        caminho.montar_plano("", 1, moradia="barco")
+    with pytest.raises(ValueError):
+        caminho.montar_plano("", 1, fogao="microondas")
+    with pytest.raises(ValueError):
+        caminho.montar_plano("", 1, moradia="apartamento", fogao="lenha")
+
+
+def test_cli_moradia_fogao(tmp_path):
+    saida = tmp_path / "a.md"
+    r = subprocess.run([sys.executable, str(RAIZ / "caminho.py"), "--pessoas", "2", "--moradia", "apartamento",
+                        "--fogao", "inducao", "--saida", str(saida)], capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr
+    assert "### Apartamento" in saida.read_text(encoding="utf-8")
+
+
+def test_manuais_e_cozinhar_existem_e_sao_citados():
+    assert (RAIZ / "MANUAIS.md").is_file()
+    coz = (RAIZ / "passos/1b-cozinhar-sem-luz.md").read_text(encoding="utf-8")
+    for termo in ("72 horas", "Apartamento", "lenha", "monóxido", "fósforo"):
+        assert termo in coz, termo
+    assert "1b-cozinhar-sem-luz.md" in (RAIZ / "passos/1-casa-72h.md").read_text(encoding="utf-8")
+    for g in ("guia/index.html", "guia/en/index.html", "guia/es/index.html"):
+        html = (RAIZ / g).read_text(encoding="utf-8")
+        assert 'id="cozinhar"' in html and 'id="manuais"' in html, g
 
 
 def test_todo_risco_tem_checklist_e_passos_existem():
