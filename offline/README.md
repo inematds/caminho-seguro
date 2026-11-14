@@ -1,5 +1,7 @@
 # Biblioteca da família sem internet — escolha 1 de 3
 
+🎬 Vídeo: https://www.youtube.com/watch?v=wAGPYvHrimI · Short: https://youtube.com/shorts/pB1SbH-8MOA
+
 Se a internet cair por dias, a família ainda consegue consultar a Wikipedia, primeiros socorros, mapas e até uma IA.
 Escolha **só a opção do aparelho que você tem**. Não precisa fazer as três.
 
