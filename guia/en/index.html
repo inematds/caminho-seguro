@@ -119,6 +119,7 @@
     <a class="sec" href="#porque">Why now</a>
     <a class="sec" href="#passos">The 5 steps</a>
     <a class="sec" href="#calcular">Calculator</a>
+    <a class="sec" href="#biblioteca">Offline library</a>
     <a class="sec" href="#trabalho">Work</a>
     <a class="sec" href="#tecnico">Kit (technical)</a>
     <span class="lang"><a href="../">PT</a><a class="on" href="./">EN</a><a href="../es/">ES</a></span>
@@ -177,7 +178,7 @@
   <div class="flow"><span>1 · Home</span><span class="arr">→</span><span>2 · Offline</span><span class="arr">→</span><span>3 · Digital</span><span class="arr">→</span><span>4 · Health and people</span><span class="arr">→</span><span>5 · Work</span></div>
   <div class="grid g2" style="margin-top:22px">
     <div class="card"><h3>🏠 1. Home: a 72-hour kit, then 14 days</h3><p>This is what Civil Defense (Brazil) recommends (and the European Union has too, since 2025): <strong>2 liters of water per person per day</strong>, nonperishable food, medicine, a flashlight and battery-powered radio, a portable charger, documents in a waterproof bag, and contacts on paper. A family of 4 needs 24 liters of water for 3 days. Then gradually build up to 14 days and review every 6 months.</p></div>
-    <div class="card"><h3>📴 2. Don’t rely only on online access</h3><p>If Pix, your banking app, or the internet stops working, how will you buy food? Keep enough cash for a few days of expenses (don’t withdraw your bank savings), contacts, prescriptions, and documents on paper, a map and information saved offline, and 14 days of food already at home.</p></div>
+    <div class="card"><h3>📴 2. Don’t rely only on online access</h3><p>If Pix, your banking app, or the internet stops working, how will you buy food? Keep enough cash for a few days of expenses (don’t withdraw your bank savings), contacts, prescriptions, and documents on paper, a map and information saved offline, and 14 days of food already at home. <a href="#biblioteca">Library without internet: 3 options ↓</a></p></div>
     <div class="card"><h3>🔐 3. Digital protection</h3><p>Your data may already have been leaked. Be wary of anyone who knows your name and CPF and asks for personal information, a password, or Pix. Turn on <strong>two-step verification</strong> (an extra code in addition to your password): for email, use an authenticator app (such as Google Authenticator or Microsoft Authenticator) instead of SMS; for WhatsApp, use “two-step verification” with a 6-digit PIN; for your bank, use the token in its own app. Use a different password for each account. Also check <a href="https://registrato.bcb.gov.br" target="_blank" rel="noopener">Registrato</a> (a free Central Bank website) for accounts and Pix keys opened under your CPF.</p></div>
     <div class="card"><h3>❤️ 4. Health and people</h3><p>Keep a 14-day supply of prescription medicine and store the prescription. <strong>Make a family plan</strong>: a meeting place, who picks up the children, a relative outside town everyone can contact, and how to reach each other without internet. Trusted neighbors. And Civil Defense (Brazil) alerts on your phone: text your ZIP code to <strong>40199</strong>.</p></div>
   </div>
@@ -205,6 +206,18 @@ function up(){var p=Math.max(1,Math.min(30,parseInt(i.value)||1));[[3,'3'],[14,'
 document.getElementById('cA'+d[1]).textContent=f(a)+' L ('+Math.ceil(a/5)+' × 5 L)';document.getElementById('cC'+d[1]).textContent='≈ '+f(Math.round(k*10)/10)+' kg';});}
 i.addEventListener('input',up);up();})();
 </script>
+
+<section id="biblioteca"><div class="wrap">
+  <span class="chip">No internet</span>
+  <h2>The family library <span class="amb">without internet</span>: choose 1 of 3</h2>
+  <p class="sub">If the internet goes down for days, the family can still access Wikipedia, first aid, maps, and even an AI. Choose only the option for the device you have. Download everything today, over Wi-Fi.</p>
+  <div class="grid g3">
+    <div class="card"><h3>📱 1. Just a phone</h3><p><strong>Kiwix</strong> app (Android and iPhone) with the "mini" Portuguese Wikipedia (<strong>1.6 GB</strong>) and basic medicine in English (166 MB). Maps of your state in <strong>Organic Maps</strong>. A small AI that, once downloaded, answers without internet. <a href="https://github.com/inematds/caminho-seguro/blob/main/offline/1-so-celular.md" target="_blank" rel="noopener">Step-by-step guide</a></p></div>
+    <div class="card"><h3>💻 2. Basic computer</h3><p><strong>Kiwix Desktop</strong> (Windows, Linux, and Mac) with the complete Portuguese Wikipedia, without photos (<strong>6.6 GB</strong>). If you want, a small AI that runs on the processor without a graphics card (slowly). <a href="https://github.com/inematds/caminho-seguro/blob/main/offline/2-pc-simples.md" target="_blank" rel="noopener">Step-by-step guide</a></p></div>
+    <div class="card"><h3>🖥️ 3. Powerful computer: Project NOMAD</h3><p>Open project by Crosstalk Solutions: in a browser dashboard, Wikipedia, Khan Academy courses for each person in the household, maps, and an AI that reads your documents. Requires Linux and, for AI, 32 GB of memory and an NVIDIA graphics card. <a href="https://inematds.github.io/project-nomad/guia/" target="_blank" rel="noopener">Guide</a> · <a href="https://www.youtube.com/watch?v=0ime1xfLE9M" target="_blank" rel="noopener">video</a></p></div>
+  </div>
+  <p class="sub" style="margin-top:16px">AI can be wrong: check medication doses and health decisions with a professional. Sizes checked on November 13, 2026 (they change with each release).</p>
+</div></section>
 
 <section id="trabalho"><div class="wrap">
   <span class="chip">Step 5</span>
@@ -276,7 +289,7 @@ i.addEventListener('input',up);up();})();
     <h3>Review every 6 months</h3>
     <p>The plan includes the date. Run it again if your family changes. For anyone working with the code, the tests are:</p>
 <pre><span class="k">python3 -m venv .venv &amp;&amp; . .venv/bin/activate &amp;&amp; pip install pytest</span>  <span class="c"># só para os testes</span>
-<span class="k">python3 -m pytest -q tests</span>  <span class="c"># 16 passed</span></pre>
+<span class="k">python3 -m pytest -q tests</span>  <span class="c"># 17 passed</span></pre>
   </div></div>
 </div></section>
 
@@ -296,6 +309,7 @@ i.addEventListener('input',up);up();})();
   <h2>Go further</h2>
   <p class="sub">The safe path brings together what other free INEMA kits already do.</p>
   <div class="phase"><div class="tag">Offline</div><div class="d"><strong><a href="https://inematds.github.io/sobreviver-ia/guia/" target="_blank" rel="noopener">sobreviver-ia</a></strong><span>Wikipedia and AI on your computer, offline; account audit; a 90-day plan.</span></div></div>
+  <div class="phase"><div class="tag">NOMAD</div><div class="d"><strong><a href="https://inematds.github.io/project-nomad/guia/" target="_blank" rel="noopener">project-nomad</a></strong><span>Project NOMAD: an offline knowledge server for a powerful computer (Wikipedia, courses, maps and AI).</span></div></div>
   <div class="phase"><div class="tag">Work</div><div class="d"><strong><a href="https://inematds.github.io/nivel-ia/guia/" target="_blank" rel="noopener">nivel-ia</a></strong><span>Your AI level certificate (AL1 to AL5), with projections for 1, 3, and 6 months.</span></div></div>
   <div class="phase"><div class="tag">Climate</div><div class="d"><strong><a href="https://www.youtube.com/@eventosextremos-inema" target="_blank" rel="noopener">INEMA extreme weather channel</a></strong><span>How to protect yourself from tornadoes, floods, and heat, on INEMA’s extreme weather channel.</span></div></div>
   <p class="sub" style="margin-top:18px">This does not replace guidance from your local civil protection authority. This is not financial or medical advice.</p>

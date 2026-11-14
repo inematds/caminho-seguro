@@ -51,6 +51,10 @@ Python 3.9+, sin instalar nada y sin internet.
 | 7 | Llegar a 14 días y revisar cada 6 meses | `python3 caminho.py` de nuevo | 🧠 tú |
 | 8 | Probar el kit (para quienes modifican el código) | `python3 -m pytest -q tests` | ⚙️ script |
 
+## Biblioteca sin internet (elige 1 de 3)
+
+Solo celular · computadora sencilla · computadora potente ([Project NOMAD](https://inematds.github.io/project-nomad/guia/es/)). Una opción por aparato, cada una en su archivo (en portugués): [offline/README.md](offline/README.md).
+
 ## Kits hermanos
 
 - [sobreviver-ia](https://inematds.github.io/sobreviver-ia/guia/) — Wikipedia e IA sin conexión, auditoría de las cuentas, plan de 90 días.

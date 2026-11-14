@@ -119,6 +119,7 @@
     <a class="sec" href="#porque">Por que agora</a>
     <a class="sec" href="#passos">Os 5 passos</a>
     <a class="sec" href="#calcular">Calculadora</a>
+    <a class="sec" href="#biblioteca">Biblioteca offline</a>
     <a class="sec" href="#trabalho">Trabalho</a>
     <a class="sec" href="#tecnico">Kit (técnico)</a>
     <span class="lang"><a class="on" href="./">PT</a><a href="en/">EN</a><a href="es/">ES</a></span>
@@ -176,7 +177,7 @@
   <div class="flow"><span>1 · Casa</span><span class="arr">→</span><span>2 · Fora do online</span><span class="arr">→</span><span>3 · Digital</span><span class="arr">→</span><span>4 · Saúde e pessoas</span><span class="arr">→</span><span>5 · Trabalho</span></div>
   <div class="grid g2" style="margin-top:22px">
     <div class="card"><h3>🏠 1. Casa: o kit de 72 horas, depois 14 dias</h3><p>É o que a Defesa Civil recomenda (e a União Europeia também, desde 2025): <strong>2 litros de água por pessoa por dia</strong>, comida que não estraga, remédios, lanterna e rádio a pilha, carregador portátil, documentos em saco à prova d'água e os contatos no papel. Uma família de 4 precisa de 24 litros de água para 3 dias. Depois, aumente aos poucos até 14 dias e revise a cada 6 meses.</p></div>
-    <div class="card"><h3>📴 2. Não depender só do online</h3><p>Se o Pix, o app do banco ou a internet pararem, como você compra comida? Dinheiro vivo para alguns dias de gasto (não é tirar o dinheiro do banco), contatos, receitas médicas e documentos no papel, mapa e informação guardados offline, e a comida de 14 dias já em casa.</p></div>
+    <div class="card"><h3>📴 2. Não depender só do online</h3><p>Se o Pix, o app do banco ou a internet pararem, como você compra comida? Dinheiro vivo para alguns dias de gasto (não é tirar o dinheiro do banco), contatos, receitas médicas e documentos no papel, mapa e informação guardados offline, e a comida de 14 dias já em casa. <a href="#biblioteca">Biblioteca sem internet: 3 opções ↓</a></p></div>
     <div class="card"><h3>🔐 3. Proteção digital</h3><p>Seus dados podem já estar vazados. Desconfie de quem sabe seu nome e CPF e pede dado, senha ou Pix. Ligue a <strong>verificação em duas etapas</strong> (um código extra além da senha): no e-mail, por um aplicativo autenticador (como Google Authenticator ou Microsoft Authenticator) em vez de SMS; no WhatsApp, a "confirmação em duas etapas" com um PIN de 6 dígitos; no banco, o token do próprio aplicativo. Senha diferente em cada conta. E confira no <a href="https://registrato.bcb.gov.br" target="_blank" rel="noopener">Registrato</a> (site grátis do Banco Central) as contas e chaves Pix abertas no seu CPF.</p></div>
     <div class="card"><h3>❤️ 4. Saúde e pessoas</h3><p>Remédios de uso contínuo com folga de 14 dias e a receita guardada. O <strong>combinado da família</strong>: ponto de encontro, quem busca as crianças, um parente fora da cidade que todos avisam, como se falar sem internet. Vizinhos de confiança. E o alerta da Defesa Civil no celular: SMS para o <strong>40199</strong> com o seu CEP.</p></div>
   </div>
@@ -204,6 +205,18 @@ function up(){var p=Math.max(1,Math.min(30,parseInt(i.value)||1));[[3,'3'],[14,'
 document.getElementById('cA'+d[1]).textContent=f(a)+' L ('+Math.ceil(a/5)+' × 5 L)';document.getElementById('cC'+d[1]).textContent='≈ '+f(Math.round(k*10)/10)+' kg';});}
 i.addEventListener('input',up);up();})();
 </script>
+
+<section id="biblioteca"><div class="wrap">
+  <span class="chip">Sem internet</span>
+  <h2>A biblioteca da família <span class="amb">sem internet</span>: escolha 1 de 3</h2>
+  <p class="sub">Se a internet cair por dias, a família ainda consulta a Wikipedia, primeiros socorros, mapas e até uma IA. Escolha só a opção do aparelho que você tem. Baixe tudo hoje, com Wi-Fi.</p>
+  <div class="grid g3">
+    <div class="card"><h3>📱 1. Só o celular</h3><p>App <strong>Kiwix</strong> (Android e iPhone) com a Wikipedia em português "mini" (<strong>1,6 GB</strong>) e medicina básica em inglês (166 MB). Mapas do seu estado no <strong>Organic Maps</strong>. Uma IA pequena que, depois de baixada uma vez, responde sem internet. <a href="https://github.com/inematds/caminho-seguro/blob/main/offline/1-so-celular.md" target="_blank" rel="noopener">Passo a passo</a></p></div>
+    <div class="card"><h3>💻 2. Computador simples</h3><p><strong>Kiwix Desktop</strong> (Windows, Linux e Mac) com a Wikipedia em português completa, sem fotos (<strong>6,6 GB</strong>). Se quiser, uma IA pequena que roda no processador, sem placa de vídeo (devagar). <a href="https://github.com/inematds/caminho-seguro/blob/main/offline/2-pc-simples.md" target="_blank" rel="noopener">Passo a passo</a></p></div>
+    <div class="card"><h3>🖥️ 3. Computador forte: Project NOMAD</h3><p>Projeto aberto da Crosstalk Solutions: num painel no navegador, Wikipedia, cursos da Khan Academy para cada pessoa da casa, mapas e uma IA que lê os seus documentos. Pede Linux e, com IA, 32 GB de memória e placa NVIDIA. <a href="https://inematds.github.io/project-nomad/guia/" target="_blank" rel="noopener">Guia</a> · <a href="https://www.youtube.com/watch?v=0ime1xfLE9M" target="_blank" rel="noopener">vídeo</a></p></div>
+  </div>
+  <p class="sub" style="margin-top:16px">A IA erra: confira dose de remédio e decisões de saúde com um profissional. Tamanhos conferidos em 13/11/2026 (mudam a cada edição).</p>
+</div></section>
 
 <section id="trabalho"><div class="wrap">
   <span class="chip">Passo 5</span>
@@ -275,7 +288,7 @@ i.addEventListener('input',up);up();})();
     <h3>Revise a cada 6 meses</h3>
     <p>O plano traz a data. Rode de novo se a família mudar. Para quem mexe no código, os testes:</p>
 <pre><span class="k">python3 -m venv .venv &amp;&amp; . .venv/bin/activate &amp;&amp; pip install pytest</span>  <span class="c"># só para os testes</span>
-<span class="k">python3 -m pytest -q tests</span>  <span class="c"># 16 passed</span></pre>
+<span class="k">python3 -m pytest -q tests</span>  <span class="c"># 17 passed</span></pre>
   </div></div>
 </div></section>
 
@@ -295,6 +308,7 @@ i.addEventListener('input',up);up();})();
   <h2>Para ir além</h2>
   <p class="sub">O caminho seguro junta o que outros kits grátis do INEMA já fazem.</p>
   <div class="phase"><div class="tag">Offline</div><div class="d"><strong><a href="https://inematds.github.io/sobreviver-ia/guia/" target="_blank" rel="noopener">sobreviver-ia</a></strong><span>Wikipedia e uma IA no seu computador, sem internet; auditoria das suas contas; plano de 90 dias.</span></div></div>
+  <div class="phase"><div class="tag">NOMAD</div><div class="d"><strong><a href="https://inematds.github.io/project-nomad/guia/" target="_blank" rel="noopener">project-nomad</a></strong><span>Project NOMAD: servidor de conhecimento sem internet para computador forte (Wikipedia, cursos, mapas e IA).</span></div></div>
   <div class="phase"><div class="tag">Trabalho</div><div class="d"><strong><a href="https://inematds.github.io/nivel-ia/guia/" target="_blank" rel="noopener">nivel-ia</a></strong><span>O certificado do seu nível de IA (AL1 a AL5), com a projeção para 1, 3 e 6 meses.</span></div></div>
   <div class="phase"><div class="tag">Clima</div><div class="d"><strong><a href="https://www.youtube.com/@eventosextremos-inema" target="_blank" rel="noopener">Canal de eventos extremos do INEMA</a></strong><span>Como se proteger de tornado, enchente e calor, no canal de eventos extremos do INEMA.</span></div></div>
   <p class="sub" style="margin-top:18px">Não substitui a orientação da Defesa Civil da sua cidade. Não é conselho financeiro nem médico.</p>

@@ -100,3 +100,15 @@ def test_sem_internet_no_codigo():
     src = (RAIZ / "caminho.py").read_text(encoding="utf-8")
     for proibido in ("import urllib", "import requests", "import socket", "http.client"):
         assert proibido not in src
+
+
+def test_biblioteca_offline_3_opcoes_separadas():
+    off = RAIZ / "offline"
+    for nome in ("README.md", "1-so-celular.md", "2-pc-simples.md", "3-pc-forte-nomad.md"):
+        assert (off / nome).is_file(), nome
+    idx = (off / "README.md").read_text(encoding="utf-8")
+    for nome in ("1-so-celular.md", "2-pc-simples.md", "3-pc-forte-nomad.md"):
+        assert nome in idx
+    for g in ("guia/index.html", "guia/en/index.html", "guia/es/index.html"):
+        html = (RAIZ / g).read_text(encoding="utf-8")
+        assert 'id="biblioteca"' in html and "project-nomad/guia/" in html
