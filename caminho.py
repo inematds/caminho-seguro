@@ -215,6 +215,9 @@ def main(argv: list[str] | None = None) -> int:
     except ValueError as e:
         print(f"erro: {e}", file=sys.stderr)
         return 2
+    except (EOFError, KeyboardInterrupt):
+        print("\nsaí sem gravar nada.", file=sys.stderr)
+        return 1
     Path(a.saida).write_text(plano, encoding="utf-8")
     q = quantidades(a.pessoas, DIAS_MINIMO)
     print(f"ok: {a.saida} — 72 h: {q['agua_l']:.0f} L de água; revise em {REVISAR_MESES} meses")
