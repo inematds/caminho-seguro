@@ -13,6 +13,8 @@ Caminho Seguro is a free INEMA kit with 5 steps to get through the coming years 
 
 📖 Guide: **https://inematds.github.io/caminho-seguro/guia/en/**
 
+🎬 Video (lives11): https://www.youtube.com/watch?v=oN9sCuGD1b4 · Short: https://youtube.com/shorts/YpXU0OIhnG4
+
 
 ## The 5 steps
 
