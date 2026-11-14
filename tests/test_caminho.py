@@ -186,3 +186,13 @@ def test_comunicar_e_deslocar_no_plano():
         assert (RAIZ / arq).is_file()
     for g in ("guia/index.html", "guia/en/index.html", "guia/es/index.html"):
         assert 'id="comunicar"' in (RAIZ / g).read_text(encoding="utf-8"), g
+
+
+def test_imagens_dos_cartoes_existem_nos_3_idiomas():
+    import re
+    for g in ("guia/index.html", "guia/en/index.html", "guia/es/index.html"):
+        p = RAIZ / g
+        srcs = re.findall(r'<img class="cimg" src="([^"]+)"', p.read_text(encoding="utf-8"))
+        assert len(srcs) == 16, (g, len(srcs))
+        for s in srcs:
+            assert (p.parent / s).resolve().is_file(), (g, s)
