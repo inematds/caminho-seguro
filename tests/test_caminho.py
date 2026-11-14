@@ -175,3 +175,14 @@ def test_biblioteca_offline_3_opcoes_separadas():
     for g in ("guia/index.html", "guia/en/index.html", "guia/es/index.html"):
         html = (RAIZ / g).read_text(encoding="utf-8")
         assert 'id="biblioteca"' in html and "project-nomad/guia/" in html
+
+
+def test_comunicar_e_deslocar_no_plano():
+    txt = caminho.montar_plano("", 2)
+    assert "## Comunicar quando o sistema cai" in txt and "## Deslocamento" in txt
+    assert "AM/FM" in txt and "COER" in txt and "polícia" in txt
+    assert "metade" in txt and "Inmetro" in txt
+    for arq in ("passos/2b-comunicar-sem-rede.md", "passos/2c-deslocamento.md"):
+        assert (RAIZ / arq).is_file()
+    for g in ("guia/index.html", "guia/en/index.html", "guia/es/index.html"):
+        assert 'id="comunicar"' in (RAIZ / g).read_text(encoding="utf-8"), g

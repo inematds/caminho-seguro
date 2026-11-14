@@ -100,6 +100,25 @@ NUNCA_DENTRO = ("Nunca carvão, churrasqueira, braseiro ou gerador dentro de cas
                 "(monóxido de carbono não tem cheiro e mata). Dor de cabeça e enjoo em várias pessoas ao mesmo tempo: "
                 "saia para o ar livre e ligue 193.")
 
+COMUNICAR = [
+    "Bateria portátil (power bank) carregada: 10.000 mAh dá cerca de 1 a 2 cargas do celular; recarregar todo mês",
+    "Carregador USB de carro (motor ligado, carro ao ar livre) e, para muitos dias, painel solar pequeno",
+    "Rádio AM/FM a pilha ou manivela, pilhas extras e as frequências das rádios da cidade no papel",
+    "Celular em economia de bateria, ligado em horários combinados; SMS passa quando a internet não passa",
+    "Walkie-talkie homologado de uso livre para a família e os vizinhos (sem licença)",
+    "Quem quiser ir além: Rádio do Cidadão (cadastro grátis na Anatel) ou radioamador (prova do COER, LABRE do estado)",
+    "Nunca transmitir na frequência da polícia, bombeiros, SAMU ou aviação: é crime e atrapalha o socorro",
+]
+
+DESLOCAR = [
+    "Tanque nunca abaixo da metade (carro elétrico: bateria acima da metade); sem luz a bomba do posto não funciona",
+    "Kit do carro: água, comida leve, lanterna, carregador, mapa de papel ou offline, cobertor, primeiros socorros",
+    "Duas rotas até o ponto de encontro e até um parente fora da cidade, uma sem ponte nem rua que alaga; saber ir a pé",
+    "Reserva de combustível só em casa ou sítio, pouca, em galão com selo do Inmetro, fora de casa; nunca em apartamento",
+    "Sem carro: bicicleta com pneu cheio e carona combinada com um vizinho; apartamento: sem luz o elevador para, combinar quem ajuda os idosos",
+    "Sem nenhum aparelho: ponto de encontro com horário, bilhete na porta e um parente fora da cidade que todos avisam",
+]
+
 CHECK_RISCO = {
     "enchente": [
         "Saber se a sua rua ou bairro já alagou e qual é o caminho até um lugar alto",
@@ -151,6 +170,8 @@ PASSOS = [
      "passos/1-casa-72h.md"),
     ("1b. Comer e cozinhar sem luz", "passos/1b-cozinhar-sem-luz.md"),
     ("2. Não depender só do online", "passos/2-fora-do-online.md"),
+    ("2b. Comunicar quando o sistema cai", "passos/2b-comunicar-sem-rede.md"),
+    ("2c. Deslocamento: tanque e rotas", "passos/2c-deslocamento.md"),
     ("3. Proteção digital", "passos/3-digital.md"),
     ("4. Saúde e pessoas", "passos/4-saude-e-pessoas.md"),
     ("5. Trabalho: a migração para a IA", "passos/5-trabalho-ia.md"),
@@ -272,6 +293,8 @@ def montar_plano(nome: str, pessoas: int, criancas: int = 0, idosos: int = 0, pe
     if criancas or idosos or pets or remedios:
         L += [""]
     L += secao_cozinhar(moradia, fogao)
+    L += ["## Comunicar quando o sistema cai", ""] + [f"- [ ] {c}" for c in COMUNICAR] + [""]
+    L += ["## Deslocamento", ""] + [f"- [ ] {c}" for c in DESLOCAR] + [""]
     L += ["## Os 5 passos", ""]
     for t, arq in PASSOS:
         L += [f"- [ ] **{t}** — ver `{arq}`"]

@@ -27,6 +27,8 @@ O caminho seguro é um kit grátis do INEMA com 5 passos para atravessar os pró
 | 1. Casa | Kit de 72 horas da Defesa Civil (2 L de água por pessoa por dia), depois 14 dias | [passos/1-casa-72h.md](passos/1-casa-72h.md) |
 | 1b. Cozinhar sem luz | 72 horas sem cozinhar (comida pronta); depois, como cozinhar conforme a casa (casa, sítio, apartamento) e o fogão (botijão, gás encanado, elétrico, lenha) | [passos/1b-cozinhar-sem-luz.md](passos/1b-cozinhar-sem-luz.md) |
 | 2. Fora do online | Dinheiro vivo para alguns dias, papel, informação offline, comida sem depender do app | [passos/2-fora-do-online.md](passos/2-fora-do-online.md) |
+| 2b. Comunicar sem rede | Celular com pelo menos uma carga, rádio AM/FM a pilha, walkie-talkie de uso livre, Rádio do Cidadão e radioamador (licença da Anatel) | [passos/2b-comunicar-sem-rede.md](passos/2b-comunicar-sem-rede.md) |
+| 2c. Deslocamento | Tanque nunca abaixo da metade, reserva com segurança, kit do carro, duas rotas, sem carro | [passos/2c-deslocamento.md](passos/2c-deslocamento.md) |
 | 3. Digital | O golpe depois do vazamento, verificação em duas etapas por aplicativo, Registrato | [passos/3-digital.md](passos/3-digital.md) |
 | 4. Saúde e pessoas | Remédios com folga, combinado da família, vizinhos, alerta 40199 | [passos/4-saude-e-pessoas.md](passos/4-saude-e-pessoas.md) |
 | 5. Trabalho | Certificado do seu nível de IA, a próxima tarefa para a IA, inema.club grátis | [passos/5-trabalho-ia.md](passos/5-trabalho-ia.md) |

@@ -14,3 +14,7 @@ comida e remédio?
 - [ ] **Comida e remédio para 14 dias** em casa (passo 1) e um jeito de cozinhar sem luz ([1b](1b-cozinhar-sem-luz.md)): no dia da pane, você não precisa do app nem do cartão.
 - [ ] **Energia:** carregador portátil, pilhas, e se puder, um painel solar pequeno ou carregador de carro.
 - [ ] **Combinar com a família** como se falar se o celular cair (passo 4).
+
+## Comunicação e deslocamento
+- Como manter o celular vivo, o rádio AM/FM e os rádios de comunicação (com e sem licença): [2b](2b-comunicar-sem-rede.md).
+- Tanque nunca abaixo da metade, kit do carro e as rotas: [2c](2c-deslocamento.md).

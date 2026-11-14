@@ -27,6 +27,8 @@ Caminho Seguro is a free INEMA kit with 5 steps to get through the coming years 
 | 1. Home | The Civil Defense 72-hour kit (2 L of water per person per day), then 14 days | [passos/1-casa-72h.md](passos/1-casa-72h.md) |
 | 1b. Cooking Without Power | 72 hours without cooking (ready-to-eat food); then, how to cook based on your home (house, rural property, apartment) and stove (propane tank, piped gas, electric, wood-burning) | [passos/1b-cozinhar-sem-luz.md](passos/1b-cozinhar-sem-luz.md) |
 | 2. Offline | Cash for a few days, paper, offline information, food that doesn’t depend on an app | [passos/2-fora-do-online.md](passos/2-fora-do-online.md) |
+| 2b. Communicate without a network | Cell phone with at least one charge, battery-powered AM/FM radio, license-free walkie-talkie, Citizens Band radio, and amateur radio (Anatel license) | [passos/2b-comunicar-sem-rede.md](passos/2b-comunicar-sem-rede.md) |
+| 2c. Getting around | Keep the tank at least half full, carry a safety reserve, car kit, two routes, no car | [passos/2c-deslocamento.md](passos/2c-deslocamento.md) |
 | 3. Digital | Scams after a data breach, two-step verification by app, Registrato | [passos/3-digital.md](passos/3-digital.md) |
 | 4. Health and people | Extra medication, a family plan, neighbors, alert 40199 | [passos/4-saude-e-pessoas.md](passos/4-saude-e-pessoas.md) |
 | 5. Work | A certificate of your AI level, your next task for AI, free inema.club | [passos/5-trabalho-ia.md](passos/5-trabalho-ia.md) |
